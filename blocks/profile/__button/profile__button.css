@@ -25,7 +25,7 @@
 @media screen and (max-width: 678px) {
     .profile__button {
         width: 282px;
-        margin-left: 19px;
-        margin-right: 19px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
