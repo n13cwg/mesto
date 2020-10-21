@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesto</title>
+    <link rel="stylesheet" href="./pages/index.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="popup popup_opened">
+            <form class="popup__container">
+                <img class="popup__close" src="./images/close_Icon.svg" alt="Зкрыть">
+                <h2 class="popup__title">Редактировать профиль</h2>
+                <input type="text" class="popup__name" placeholder="Имя">
+                <input type="text" class="popup__job" placeholder="Работа">
+                <button class="popup__save">Сохранить</button>
+            </form>
+        </div>
+        <header class="header">
+            <img class="header__logo" src="./images/logo.svg" alt="Место">
+        </header>
+        <main class="main">
+            <section class="profile">
+                <div class="profile__user">
+                    <img class="profile__avatar" src="./images/avatar.jpg" alt="Александра">
+                    <div class="profile__info">
+                        <div>
+                            <h1 class="profile__name">Александра</h1>
+                            <p class="profile__job">Не исследователь океана</p>
+                        </div>
+                        <button class="profile__edit-button"></button>
+                    </div>
+                </div>
+                <button class="profile__button">
+                </button>
+            </section>
+
+            <section class="elements">
+                <div class="element">
+                    <img class="element__place" src="./images/2019-06-20 10-11-49.JPG" alt="Фото">
+                    <div class="element__info">
+                        <h2 class="element__title">Отпуск</h2>
+                        <img class="element__like" src="./images/like.svg" alt="Лайк">
+                    </div>
+                </div>
+                <div class="element">
+                    <img class="element__place" src="./images/2019-06-20 10-12-09.JPG" alt="Фото">
+                    <div class="element__info">
+                        <h2 class="element__title">Море, солнце</h2>
+                        <img class="element__like" src="./images/like.svg" alt="Лайк">
+                    </div>
+                </div>
+                <div class="element">
+                    <img class="element__place" src="./images/2019-06-25 19-55-46.JPG" alt="Фото">
+                    <div class="element__info">
+                        <h2 class="element__title">Была здесь</h2>
+                        <img class="element__like" src="./images/like.svg" alt="Лайк">
+                    </div>
+                </div>
+                <div class="element">
+                    <img class="element__place" src="./images/2019-06-25 19-56-28.JPG" alt="Фото">
+                    <div class="element__info">
+                        <h2 class="element__title">и здесь</h2>
+                        <img class="element__like" src="./images/like.svg" alt="Лайк">
+                    </div>
+                </div>
+                <div class="element">
+                    <img class="element__place" src="./images/2019-06-25 19-57-55.JPG" alt="Фото">
+                    <div class="element__info">
+                        <h2 class="element__title">Были и слоны, и водопады</h2>
+                        <img class="element__like" src="./images/like.svg" alt="Лайк">
+                    </div>
+                </div>
+                <div class="element">
+                    <img class="element__place" src="./images/2019-06-25 20-01-09.JPG" alt="Фото">
+                    <div class="element__info">
+                        <h2 class="element__title">Прогулки и клубы</h2>
+                        <img class="element__like" src="./images/like.svg" alt="Лайк">
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
+        </footer>
+    </div>
+</body>
+
+</html>
