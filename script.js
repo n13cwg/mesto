@@ -8,22 +8,22 @@ let inputJob = document.querySelector('.popup__job'); //
 let userName = document.querySelector('.profile__name'); // 
 let userJob = document.querySelector('.profile__job'); //
 
-function openPopup() {
-    let popup = document.querySelector('.popup');
-    popup.className = 'popup_opened';
+function openPopup() { // Фунция для открытия popup
+    let popup = document.querySelector('.popup'); // Создала переменную popup и присвоила ей значение <div class="popup">
+    popup.className = 'popup_opened'; // Добавила класс popup_opened
 }
 
-btnEdit.addEventListener('click', openPopup);
+btnEdit.addEventListener('click', openPopup); // Собитие, при нажании на <button class="profile__edit-button"> срабатывает function openPopup()
 
-function closePopup() {
-    let btnClose = document.querySelector('.popup__close'); // Крестик (закрыть)
-    popup.className.toggle('popup');
+function closePopup() { // Фунция для закрытия popup
+    let btnClose = document.querySelector('.popup__close'); // Создала btnClose и присвоила ей значение <button class="popup__close">
+    popup.className.toggle('popup'); // Вернула класс .popup для закрытиня попапа
 }
 
-btnClose.addEventListener('click', closePopup);
+btnClose.addEventListener('click', closePopup); // Собитие, при нажании на <button class="popup__close"> срабатывает function closePopup()
 
-function savePopup() {
-    let btnSave = document.querySelector('.popup__save'); // Кнопка "Сохранить"
+function savePopup() { // Фунция для закрытия popup и заменя содержимого в <h1 class="profile__name"> и <p class="profile__job">
+    let btnSave = document.querySelector('.popup__save'); // Создала btnSave и присвоила ей значение <button class="popup__save">
 
 }
 btnSave.addEventListener('click', savePopup);
