@@ -1,16 +1,18 @@
 .popup__close {
     position: absolute;
-    margin-left: 386px;
-    margin-top: -79px;
+    margin-left: 387px;
+    margin-top: -66px;
+    height: 40.7px;
+    width: 40.7px;
     cursor: pointer;
     transition: all 0.5s ease;
-    /* transform: rotate(45deg); */
     border: none;
     background-image: url(../../../images/close_Icon.svg);
     background-position: center;
     background-size: contain;
+    background-color: transparent;
     box-sizing: border-box;
-    padding: 23px
+    padding: 0;
 }
 
 .popup__close:hover {
@@ -19,7 +21,9 @@
 
 @media screen and (max-width: 678px) {
     .popup__close {
-        margin-left: 211px;
-        margin-top: -107px;
+        height: 26px;
+        width: 26px;
+        margin-left: 227px;
+        margin-top: -70px;
     }
 }
