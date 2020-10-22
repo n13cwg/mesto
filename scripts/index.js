@@ -2,9 +2,8 @@ let popup = document.querySelector('.popup');
 
 let btnEdit = document.querySelector('.profile__edit-button');
 let btnClose = document.querySelector('.popup__close');
-// let btnSave = document.querySelector('.popup__save');
 
-let userContainer = document.querySelector('.profile__container');
+let popupContainer = document.querySelector('.popup__container');
 
 let inputName = document.querySelector('.popup__name');
 let inputJob = document.querySelector('.popup__job');
@@ -32,6 +31,5 @@ function savePopup(evt) {
     userName.textContent = inputName.value;
     userJob.textContent = inputJob.value;
 }
-userContainer.addEventListener("submit", savePopup);
-
-// вместо popup.className = "popup"; и popup.className = "popup_opened";  должно использоваться popup.classList.add('popup_opened') и popup.classList.remove('popup_opened')  - удаляем или добавляем модификатор, а сам класс popup должен быть у попапа всегда. Т.е. управление открытие/закрытием только за счет класса модификатора popup_opened
+popupContainer.addEventListener("submit", savePopup);
+popupContainer.addEventListener("submit", closePopup);
