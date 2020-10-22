@@ -11,12 +11,12 @@
 <body>
     <div class="page">
         <div class="popup">
-            <form class="popup__container">
+            <form class="popup__container" type="submit" name="form-container">
                 <button class="popup__close" type="button"></button>
                 <h2 class="popup__title">Редактировать профиль</h2>
-                <input type="text" class="popup__name" placeholder="Имя">
-                <input type="text" class="popup__job" placeholder="Работа">
-                <button class="popup__save" type="button">Сохранить</button>
+                <input type="text" class="popup__name" value="" name="popup-name">
+                <input type="text" class="popup__job" value="" name="popup-job">
+                <button class="popup__save" type="submit">Сохранить</button>
             </form>
         </div>
         <header class="header">
@@ -27,7 +27,7 @@
                 <div class="profile__user">
                     <img class="profile__avatar" src="./images/avatar.jpg" alt="Александра">
                     <div class="profile__info">
-                        <div>
+                        <div class="profile__container">
                             <h1 class="profile__name">Александра</h1>
                             <p class="profile__job">Не исследователь океана</p>
                         </div>

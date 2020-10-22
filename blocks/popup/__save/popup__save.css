@@ -22,6 +22,10 @@
     background: rgba(0, 0, 0, 0.8);
 }
 
+.popup__save:focus {
+    outline: none;
+}
+
 @media screen and (max-width: 678px) {
     .popup__save {
         font-size: 14px;

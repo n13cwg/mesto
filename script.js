@@ -1,28 +1,37 @@
-let btnEdit = document.querySelector('.profile__edit-button'); // Кнопка редактировать профиль
-let btnClose = document.querySelector('.popup__close'); // Создала btnClose и присвоила ей значение <button class="popup__close">
-let btnSave = document.querySelector('.popup__save'); // Создала btnSave и присвоила ей значение <button class="popup__save">
+let popup = document.querySelector('.popup');
 
-let inputName = document.querySelector('.popup__name'); // 
-let inputJob = document.querySelector('.popup__job'); // 
+let btnEdit = document.querySelector('.profile__edit-button');
+let btnClose = document.querySelector('.popup__close');
+let btnSave = document.querySelector('.popup__save');
 
-let userName = document.querySelector('.profile__name'); // 
-let userJob = document.querySelector('.profile__job'); //
+let userContainer = document.querySelector('.profile__container');
 
-function openPopup() { // Фунция для открытия popup
-    let popup = document.querySelector('.popup'); // Создала переменную popup и присвоила ей значение <div class="popup">
-    popup.className = 'popup_opened'; // Добавила класс popup_opened
+let inputName = document.querySelector('.popup__name');
+let inputJob = document.querySelector('.popup__job');
+
+let userName = document.querySelector('.profile__name');
+let userJob = document.querySelector('.profile__job');
+
+function openPopup() {
+    popup.classList.add('popup_opened');
+    inputName.value = userName.textContent;
+    inputJob.value = userJob.textContent;
 }
 
-btnEdit.addEventListener('click', openPopup); // Собитие, при нажании на <button class="profile__edit-button"> срабатывает function openPopup()
+btnEdit.addEventListener('click', openPopup);
 
-function closePopup() { // Фунция для закрытия popup
-    let popup = document.querySelector('.popup_opened');
-    popup.className = 'popup'; // Вернула класс .popup для закрытиня попапа
+function closePopup() {
+    popup.classList.remove('popup_opened');
 }
 
-btnClose.addEventListener('click', closePopup); // Собитие, при нажании на <button class="popup__close"> срабатывает function closePopup()
+btnClose.addEventListener('click', closePopup);
 
-function savePopup() { // Фунция для закрытия popup и заменя содержимого в <h1 class="profile__name"> и <p class="profile__job">
+function savePopup(evt) {
+    evt.preventDefault();
 
+    userName.textContent = inputName.value;
+    userJob.textContent = inputJob.value;
 }
-btnSave.addEventListener('click', savePopup);
+userContainer.addEventListener("submit", savePopup);
+
+// вместо popup.className = "popup"; и popup.className = "popup_opened";  должно использоваться popup.classList.add('popup_opened') и popup.classList.remove('popup_opened')  - удаляем или добавляем модификатор, а сам класс popup должен быть у попапа всегда. Т.е. уравление открытие/закрытием только за счет класса модификатора popup_opened

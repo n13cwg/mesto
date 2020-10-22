@@ -16,6 +16,10 @@
     opacity: 0.6;
 }
 
+.profile__button:focus {
+    outline: none;
+}
+
 @media screen and (max-width: 970px) {
     .profile__button {
         margin-top: 32px;
