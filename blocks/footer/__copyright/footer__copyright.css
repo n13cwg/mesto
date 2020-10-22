@@ -8,11 +8,12 @@
     margin: 0;
 }
 
-@media screen and (max-width: 880px) {
+
+/* @media screen and (max-width: 880px) {
     .footer__copyright {
         margin-left: 27px;
     }
-}
+} */
 
 @media screen and (max-width: 678px) {
     .footer__copyright {
