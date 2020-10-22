@@ -3,11 +3,12 @@
     margin-bottom: 40.6px;
 }
 
-@media screen and (max-width: 880px) {
+
+/* @media screen and (max-width: 880px) {
     .header__logo {
         margin-left: 27px;
     }
-}
+} */
 
 @media screen and (max-width: 678px) {
     .header__logo {
