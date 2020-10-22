@@ -34,4 +34,4 @@ function savePopup(evt) {
 }
 userContainer.addEventListener("submit", savePopup);
 
-// вместо popup.className = "popup"; и popup.className = "popup_opened";  должно использоваться popup.classList.add('popup_opened') и popup.classList.remove('popup_opened')  - удаляем или добавляем модификатор, а сам класс popup должен быть у попапа всегда. Т.е. уравление открытие/закрытием только за счет класса модификатора popup_opened
+// вместо popup.className = "popup"; и popup.className = "popup_opened";  должно использоваться popup.classList.add('popup_opened') и popup.classList.remove('popup_opened')  - удаляем или добавляем модификатор, а сам класс popup должен быть у попапа всегда. Т.е. управление открытие/закрытием только за счет класса модификатора popup_opened
