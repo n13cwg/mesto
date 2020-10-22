@@ -2,7 +2,7 @@ let popup = document.querySelector('.popup');
 
 let btnEdit = document.querySelector('.profile__edit-button');
 let btnClose = document.querySelector('.popup__close');
-let btnSave = document.querySelector('.popup__save');
+// let btnSave = document.querySelector('.popup__save');
 
 let userContainer = document.querySelector('.profile__container');
 
