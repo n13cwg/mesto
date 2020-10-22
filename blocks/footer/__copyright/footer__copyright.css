@@ -13,3 +13,10 @@
         margin-left: 27px;
     }
 }
+
+@media screen and (max-width: 678px) {
+    .footer__copyright {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
