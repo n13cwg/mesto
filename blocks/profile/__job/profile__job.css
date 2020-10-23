@@ -1,24 +1,24 @@
 .profile__job {
-    max-width: 318px;
-    margin: 5px 0 0;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
-    color: #FFFFFF;
+  max-width: 318px;
+  margin: 5px 0 0;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 970px) {
-    .profile__job {
-        text-align: center;
-    }
+  .profile__job {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 678px) {
-    .profile__job {
-        margin-top: -5px;
-        font-size: 14px;
-        line-height: 17px;
-    }
+  .profile__job {
+    margin-top: -5px;
+    font-size: 14px;
+    line-height: 17px;
+  }
 }

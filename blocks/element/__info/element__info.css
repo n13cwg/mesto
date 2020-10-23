@@ -1,7 +1,7 @@
 .element__info {
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 246px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 246px;
 }

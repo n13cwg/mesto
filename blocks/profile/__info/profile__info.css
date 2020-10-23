@@ -1,5 +1,5 @@
 .profile__info {
-    display: flex;
-    flex-direction: row;
-    justify-self: start;
+  display: flex;
+  flex-direction: row;
+  justify-self: start;
 }

@@ -1,8 +1,7 @@
 .header__logo {
-    width: 142.01px;
-    margin-bottom: 40.6px;
+  width: 142.01px;
+  margin-bottom: 40.6px;
 }
-
 
 /* @media screen and (max-width: 880px) {
     .header__logo {
@@ -11,8 +10,8 @@
 } */
 
 @media screen and (max-width: 678px) {
-    .header__logo {
-        width: 103.74px;
-        margin-bottom: 31.6px;
-    }
+  .header__logo {
+    width: 103.74px;
+    margin-bottom: 31.6px;
+  }
 }
