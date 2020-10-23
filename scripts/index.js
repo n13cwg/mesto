@@ -28,7 +28,6 @@ function savePopup(evt) {
   userJob.textContent = inputJob.value;
   closePopup();
 }
-
+btnClose.addEventListener('click', closePopup);
 btnEdit.addEventListener('click', openPopup);
 popupContainer.addEventListener("submit", savePopup);
-popupContainer.addEventListener("submit", closePopup);
