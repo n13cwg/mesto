@@ -5,8 +5,8 @@ let btnClose = document.querySelector('.popup__close');
 
 let popupContainer = document.querySelector('.popup__container');
 
-let inputName = document.querySelector('.popup__name');
-let inputJob = document.querySelector('.popup__job');
+let inputName = document.querySelector('.popup__input_name');
+let inputJob = document.querySelector('.popup__input_job');
 
 let userName = document.querySelector('.profile__name');
 let userJob = document.querySelector('.profile__job');
@@ -17,19 +17,18 @@ function openPopup() {
   inputJob.value = userJob.textContent;
 }
 
-btnEdit.addEventListener('click', openPopup);
-
 function closePopup() {
   popup.classList.remove('popup_opened');
 }
-
-btnClose.addEventListener('click', closePopup);
 
 function savePopup(evt) {
   evt.preventDefault();
 
   userName.textContent = inputName.value;
   userJob.textContent = inputJob.value;
+  closePopup();
 }
+
+btnEdit.addEventListener('click', openPopup);
 popupContainer.addEventListener("submit", savePopup);
 popupContainer.addEventListener("submit", closePopup);

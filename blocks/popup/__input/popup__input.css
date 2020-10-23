@@ -1,4 +1,4 @@
-.popup__name {
+.popup__input {
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
@@ -12,6 +12,7 @@
   box-sizing: border-box;
   padding-bottom: 7.3px;
   margin: 48px 0 0;
+  /* margin: 29.7px 0 0; из popup__job */
 }
 
 @media screen and (max-width: 678px) {
