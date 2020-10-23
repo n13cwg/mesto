@@ -2,11 +2,11 @@
 
 ### Задачи проекта
 
-1. Вёрстка:
+:one: ***Вёрстка: (bold italic)***
 
 :white_check_mark: Сайт свёрстан на Grid и Flex. В работе используются медиазапросы для разных разрешений экранов.
 
-2. JavaScript:
+:two: ***JavaScript: (bold italic)***
 
 :white_check_mark: Отсутствуют ошибки в консоли;
 
