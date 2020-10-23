@@ -28,5 +28,6 @@
 * [Ссылка на макет в Figma](https://www.figma.com/file/StZjf8HnoeLdiXS7dYrLAh/JavaScript.-Sprint-4)
 
 ***Картинки***
+
 В работе использованы фото с сайта Unsplash
 * [Ссылка на сайт с картинками](https://unsplash.com/)
