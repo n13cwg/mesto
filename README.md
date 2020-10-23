@@ -23,10 +23,10 @@
 :white_check_mark: Все ссылки и интерактивные элементы имеют состояние наведения :hover. Проект визуально соответствует макету.
 * [Ссылка на проект](https://n13cwg.github.io/mesto/)
 
-**Figma**
+***Figma***
 
 * [Ссылка на макет в Figma](https://www.figma.com/file/StZjf8HnoeLdiXS7dYrLAh/JavaScript.-Sprint-4)
 
-**Картинки**
+***Картинки***
 В работе использованы фото с сайта Unsplash
 * [Ссылка на сайт с картинками](https://unsplash.com/)
