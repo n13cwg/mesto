@@ -3,7 +3,7 @@ let popup = document.querySelector('.popup');
 let btnEdit = document.querySelector('.profile__edit-button');
 let btnClose = document.querySelector('.popup__close');
 
-let userContainer = document.querySelector('.profile__container');
+let popupContainer = document.querySelector('.popup__container');
 
 let inputName = document.querySelector('.popup__name');
 let inputJob = document.querySelector('.popup__job');
@@ -31,4 +31,5 @@ function savePopup(evt) {
   userName.textContent = inputName.value;
   userJob.textContent = inputJob.value;
 }
-userContainer.addEventListener('submit', savePopup);
+popupContainer.addEventListener("submit", savePopup);
+popupContainer.addEventListener("submit", closePopup);
