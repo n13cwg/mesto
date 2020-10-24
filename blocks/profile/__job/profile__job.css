@@ -9,6 +9,7 @@
   color: #ffffff;
   overflow: hidden;
   text-overflow: ellipsis;
+  max-width: 318px;
 }
 
 @media screen and (max-width: 970px) {
