@@ -11,13 +11,12 @@
   border-left: none;
   box-sizing: border-box;
   padding-bottom: 7.3px;
-  margin: 39px 0 0;
-  /* margin: 29.7px 0 0; из popup__job */
+  margin: 25px 0 0;
 }
 
 @media screen and (max-width: 678px) {
   .popup__name {
     padding-bottom: 9.3px;
-    margin-top: 76px;
+    margin-top: 38px;
   }
 }
