@@ -1,3 +1,4 @@
+// Скрипт для открытия попапа редактирования профиля:
 let popup = document.querySelector('.popup');
 
 let btnEdit = document.querySelector('.profile__edit-button');
@@ -31,3 +32,5 @@ function savePopup(evt) {
 btnClose.addEventListener('click', closePopup);
 btnEdit.addEventListener('click', openPopup);
 popupContainer.addEventListener("submit", savePopup);
+
+// Скрипт для открытия попапа добавления карточек, удаление карточек:
