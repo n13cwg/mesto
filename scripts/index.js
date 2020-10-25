@@ -1,24 +1,24 @@
 // Скрипт для редактирования профиля:
-let popup = document.querySelector('.popup');
-let popupImg = document.querySelector('.popup-img');
+const popup = document.querySelector('.popup');
+const popupImg = document.querySelector('.popup-img');
 
-let btnEdit = document.querySelector('.profile__edit-button');
-let btnClose = document.querySelector('.popup__close');
-let btnImgAdd = document.querySelector('.profile__button');
-let btnImgClose = document.querySelector('.popup__close-img');
+const btnEdit = document.querySelector('.profile__edit-button');
+const btnClose = document.querySelector('.popup__close');
+const btnImgAdd = document.querySelector('.profile__button');
+const btnImgClose = document.querySelector('.popup__close-img');
 
-let popupImgContainer = document.querySelector('.popup__container-img');
-let popupContainer = document.querySelector('.popup__container');
+const popupImgContainer = document.querySelector('.popup__container-img');
+const popupContainer = document.querySelector('.popup__container');
 
-let inputName = document.querySelector('.popup__input_name');
-let inputJob = document.querySelector('.popup__input_job');
-let inputImgName = document.querySelector('.popup__input_name-img');
-let inputImgAddress = document.querySelector('.popup__input_address');
+const inputName = document.querySelector('.popup__input_name');
+const inputJob = document.querySelector('.popup__input_job');
+const inputImgName = document.querySelector('.popup__input_name-img');
+const inputImgAddress = document.querySelector('.popup__input_address');
 
-let userName = document.querySelector('.profile__name');
-let userJob = document.querySelector('.profile__job');
-let imgName = document.querySelector('.element__title');
-let imgAddress = document.querySelector('.element__place');
+const userName = document.querySelector('.profile__name');
+const userJob = document.querySelector('.profile__job');
+const imgName = document.querySelector('.element__title');
+const imgAddress = document.querySelector('.element__place');
 
 function openPopup() {
   popup.classList.add('popup_opened');
