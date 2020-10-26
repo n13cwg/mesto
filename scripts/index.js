@@ -1,5 +1,6 @@
 // Скрипт для редактирования профиля:
 const popup = document.querySelector('.popup');
+const popupImgAdd = document.querySelector('.popup-img-add');
 const popupImg = document.querySelector('.popup-img');
 
 const btnEdit = document.querySelector('.profile__edit-button');
@@ -20,6 +21,8 @@ const userJob = document.querySelector('.profile__job');
 const imgName = document.querySelector('.element__title');
 const imgAddress = document.querySelector('.element__place');
 
+const elemPlace = document.querySelectorAll('.element__place');
+
 function openPopup() {
   popup.classList.add('popup_opened');
   inputName.value = userName.textContent;
@@ -28,6 +31,7 @@ function openPopup() {
 
 function closePopup() {
   popup.classList.remove('popup_opened');
+  popupImgAdd.classList.remove('popup_opened');
 }
 
 function savePopup(evt) {
@@ -38,6 +42,7 @@ function savePopup(evt) {
   closePopup();
 }
 btnClose.addEventListener('click', closePopup);
+btnImgClose.addEventListener('click', closePopup);
 btnEdit.addEventListener('click', openPopup);
 popupContainer.addEventListener("submit", savePopup);
 
@@ -47,29 +52,34 @@ popupContainer.addEventListener("submit", savePopup);
 // 3. удалить карточку
 // 4. закрасить лайки
 // 5. плавное появление попапов
-const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-];
+
+function openImgPopup() {
+  popupImgAdd.classList.add('popup_opened');
+}
+btnImgAdd.addEventListener('click', openImgPopup);
+// const initialCards = [
+//   {
+//     name: 'Архыз',
+//     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+//   },
+//   {
+//     name: 'Челябинская область',
+//     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+//   },
+//   {
+//     name: 'Иваново',
+//     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+//   },
+//   {
+//     name: 'Камчатка',
+//     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+//   },
+//   {
+//     name: 'Холмогорский район',
+//     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+//   },
+//   {
+//     name: 'Байкал',
+//     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+//   }
+// ];
