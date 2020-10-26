@@ -1,12 +1,12 @@
 // Скрипт для редактирования профиля:
 const popup = document.querySelector('.popup');
 const popupImgAdd = document.querySelector('.popup-img-add');
-const popupImg = document.querySelector('.popup-img');
 
 const btnEdit = document.querySelector('.profile__edit-button');
 const btnClose = document.querySelector('.popup__close');
 const btnImgAdd = document.querySelector('.profile__button');
 const btnImgClose = document.querySelector('.popup__close-img');
+const btnLike = document.querySelectorAll('.element__like');
 
 const popupImgContainer = document.querySelector('.popup__container-img');
 const popupContainer = document.querySelector('.popup__container');
@@ -48,15 +48,20 @@ popupContainer.addEventListener("submit", savePopup);
 
 // Скрипт для добавления карточек, удаление карточек:
 // 1. открыть/закрыть попап
-// 2. добавление новых карточек
-// 3. удалить карточку
-// 4. закрасить лайки
-// 5. плавное появление попапов
-
 function openImgPopup() {
   popupImgAdd.classList.add('popup_opened');
 }
 btnImgAdd.addEventListener('click', openImgPopup);
+// 2. добавление новых карточек
+// 3. удалить карточку
+// 4. заменить фоновую картинку:
+function changeBgImg(e) {
+  e.target.style.backgroundImage = "url('./images/like-black.svg')";
+}
+
+btnLike.addEventListener('click', changeBgImg);
+// 5. плавное появление попапов
+
 // const initialCards = [
 //   {
 //     name: 'Архыз',
