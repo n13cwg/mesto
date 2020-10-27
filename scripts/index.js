@@ -53,13 +53,12 @@ btnImgAdd.addEventListener('click', openImgPopup);
 // 2. добавление новых карточек
 // 3. удалить карточку
 // 4. заменить фоновую картинку:
-function removeBgImg(evt) {
-  evt.target.classList.remove('element__like_black');
-}
+// function removeBgImg(evt) {
+//   evt.target.classList.remove('element__like_black');
+// }
 
 function changeBgImg(evt) {
   evt.target.classList.add('element__like_black');
-  removeBgImg();
 }
 btnLike.addEventListener('click', changeBgImg);
 
