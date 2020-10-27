@@ -6,7 +6,7 @@ const btnEdit = document.querySelector('.profile__edit-button');
 const btnClose = document.querySelector('.popup__close');
 const btnImgAdd = document.querySelector('.profile__button');
 const btnImgClose = document.querySelector('.popup__close-img');
-const btnLike = document.querySelectorAll('.element__like');
+const btnLike = document.querySelector('.element__like');
 
 const popupImgContainer = document.querySelector('.popup__container-img');
 const popupContainer = document.querySelector('.popup__container');
@@ -20,8 +20,6 @@ const userName = document.querySelector('.profile__name');
 const userJob = document.querySelector('.profile__job');
 const imgName = document.querySelector('.element__title');
 const imgAddress = document.querySelector('.element__place');
-
-const elemPlace = document.querySelectorAll('.element__place');
 
 function openPopup() {
   popup.classList.add('popup_opened');
@@ -55,11 +53,17 @@ btnImgAdd.addEventListener('click', openImgPopup);
 // 2. добавление новых карточек
 // 3. удалить карточку
 // 4. заменить фоновую картинку:
-function changeBgImg(e) {
-  e.target.style.backgroundImage = "url('./images/like-black.svg')";
+function removeBgImg(evt) {
+  evt.target.classList.remove('element__like_black');
 }
 
+function changeBgImg(evt) {
+  evt.target.classList.add('element__like_black');
+  removeBgImg();
+}
 btnLike.addEventListener('click', changeBgImg);
+
+
 // 5. плавное появление попапов
 
 // const initialCards = [
