@@ -90,7 +90,6 @@ function closePopup() {
 
 function savePopup(evt) {
   evt.preventDefault();
-
   userName.textContent = inputName.value;
   userJob.textContent = inputJob.value;
   closePopup();
