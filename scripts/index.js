@@ -23,28 +23,28 @@ const imgAddress = document.querySelector('.element__place');
 
 const initialCards = [
   {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+    name: 'Кафе',
+    link: './images/safar-safarov-MSN8TFhJ0is-unsplash.jpg'
   },
   {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+    name: 'TODO list',
+    link: './images/roman-synkevych-vXInUOv1n84-unsplash.jpg'
   },
   {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+    name: 'Картинка',
+    link: './images/markus-spiske-MgtHZ4zlC1U-unsplash.jpg'
   },
   {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+    name: 'Компьютер',
+    link: './images/goran-ivos-idmvPhF8t4E-unsplash.jpg'
   },
   {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+    name: 'Философия',
+    link: './images/ben-kolde-Ajcipx1VDXI-unsplash.jpg'
   },
   {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+    name: 'Идеальное рабочее место',
+    link: './images/alexandru-acea--WBYxmW4yuw-unsplash.jpg'
   }
 ];
 
@@ -53,11 +53,13 @@ const cardData = {
   link: inputImgAddress.value
 };
 
-initialCards.forEach(function () {
-  const cardElement = createCard(cardData);
-  elementsContainer.prepend(cardElement);
-  console.log(cardData);
-})
+initialCards.forEach(createCard);
+
+// initialCards.forEach(function () {
+//   const cardElement = createCard(cardData);
+//   elementsContainer.prepend(cardElement);
+//   console.log(cardData);
+// })
 
 function createCard(item) {
   const elementTemplate = document.querySelector('#elementTemplate').content;
