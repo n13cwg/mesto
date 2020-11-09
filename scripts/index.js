@@ -56,19 +56,21 @@ const cardData = {
 initialCards.forEach(function () {
   const cardElement = createCard(cardData);
   elementsContainer.prepend(cardElement);
+  console.log(cardData);
 })
 
-function createCard(data) {
+function createCard(item) {
   const elementTemplate = document.querySelector('#elementTemplate').content;
   // клонируем содержимое тега template
   const cadrElement = elementTemplate.cloneNode(true);
   // наполняем содержимым
-  cadrElement.querySelector('.element__place').src = data.link;
-  cadrElement.querySelector('.element__title').textContent = data.name;
+  cadrElement.querySelector('.element__place').src = item.link;
+  cadrElement.querySelector('.element__title').textContent = item.name;
   // отображаем на странице
   elementsContainer.prepend(cadrElement);
   return cadrElement;
 }
+
 function openPopup() {
   popup.classList.add('popup_opened');
   inputName.value = userName.textContent;
