@@ -1,4 +1,3 @@
-// Скрипт для редактирования профиля:
 const popup = document.querySelector('.popup');
 const popupImgAdd = document.querySelector('.popup-img-add');
 
