@@ -5,7 +5,6 @@ const btnEdit = document.querySelector('.profile__edit-button');
 const btnClose = document.querySelector('.popup__close');
 const btnImgAdd = document.querySelector('.profile__button');
 const btnImgClose = document.querySelector('.popup__close-img');
-// const btnLike = document.querySelector('.element__like');
 
 const elementsContainer = document.querySelector('.elements');
 const popupImgContainer = document.querySelector('.popup__container-img');
