@@ -47,12 +47,6 @@ const initialCards = [
     link: './images/alexandru-acea--WBYxmW4yuw-unsplash.jpg'
   }
 ];
-
-const cardData = {
-  name: inputImgName.value,
-  link: inputImgAddress.value
-};
-
 // Шесть карточек «из коробки»
 initialCards.forEach(createCard);
 // Добавление карточки
@@ -66,6 +60,18 @@ function createCard(item) {
   // отображаем на странице
   elementsContainer.prepend(cadrElement);
   return cadrElement;
+}
+// Добавление новой карточки
+function saveImgPopup(evt) {
+  evt.preventDefault();
+  const cardData = {
+    name: inputImgName.value,
+    link: inputImgAddress.value
+  };
+  const cardElement = createCard(cardData);
+  elementsContainer.prepend(cardElement);
+  popupImgContainer.reset(cardData);
+  closePopup();
 }
 // Открытие попапа профиля
 function openPopup() {
@@ -95,19 +101,9 @@ function savePopup(evt) {
 // Открытие попапа с картинкой
 // Плавное открытие и закрытие попапов
 
-function saveImgPopup(evt) {
-  evt.preventDefault();
-  const cardElement = createCard(cardData);
-  elementsContainer.prepend(cardElement);
-  // imgName.textContent = inputImgName.value;
-  // imgAddress.textContent = inputImgAddress.value;
-  console.log(cardData);
-  closePopup();
-}
-
 btnClose.addEventListener('click', closePopup);
 btnImgClose.addEventListener('click', closePopup);
 btnEdit.addEventListener('click', openPopup);
 popupContainer.addEventListener("submit", savePopup);
 btnImgAdd.addEventListener('click', openImgPopup);
-// popupImgContainer.addEventListener("submit", saveImgPopup);
+popupImgContainer.addEventListener("submit", saveImgPopup);
