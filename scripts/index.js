@@ -60,10 +60,12 @@ function createCard(item) {
   cadrElement.querySelector('.element__title').textContent = item.name;
   // отображаем на странице
   elementsContainer.prepend(cadrElement);
+  // Лайк карточки
   const btnLike = document.querySelector('.element__like');
   btnLike.addEventListener('click', function () {
     btnLike.classList.toggle('element__like_black');
-  })
+  });
+  // Удаление карточки
   const btnDelete = document.querySelector('.element__delete-btn');
   btnDelete.addEventListener('click', function () {
     const element = btnDelete.closest('.element');
@@ -95,10 +97,6 @@ function openImgPopup() {
 }
 
 // Открытие попапа с картинкой
-function showImgPopup() {
-  popupImgShow.classList.add('popup_opened');
-
-}
 
 // Закрытие попапа
 function closePopup() {
@@ -113,14 +111,9 @@ function savePopup(evt) {
   closePopup();
 }
 
-// Лайк карточки
-// Удаление карточки
-// Плавное открытие и закрытие попапов
-
 btnClose.addEventListener('click', closePopup);
 btnImgClose.addEventListener('click', closePopup);
 btnEdit.addEventListener('click', openPopup);
 popupContainer.addEventListener("submit", savePopup);
 btnImgAdd.addEventListener('click', openImgPopup);
 popupImgContainer.addEventListener("submit", saveImgPopup);
-// .addEventListener('click', showImgPopup);
