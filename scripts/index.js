@@ -58,7 +58,6 @@ initialCards.forEach(createCard);
 // initialCards.forEach(function () {
 //   const cardElement = createCard(cardData);
 //   elementsContainer.prepend(cardElement);
-//   console.log(cardData);
 // })
 
 function createCard(item) {
