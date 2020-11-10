@@ -5,11 +5,12 @@ const btnEdit = document.querySelector('.profile__edit-button');
 const btnClose = document.querySelector('.popup__close');
 const btnImgAdd = document.querySelector('.profile__button');
 const btnImgClose = document.querySelector('.popup__close-img');
-const btnLike = document.querySelector('.element__like');
+// const btnLike = document.querySelector('.element__like');
 
 const elementsContainer = document.querySelector('.elements');
 const popupImgContainer = document.querySelector('.popup__container-img');
 const popupContainer = document.querySelector('.popup__container');
+const popupImgShow = document.querySelector('.popup-img');
 
 const inputName = document.querySelector('.popup__input_name');
 const inputJob = document.querySelector('.popup__input_job');
@@ -19,7 +20,7 @@ const inputImgAddress = document.querySelector('.popup__input_address');
 const userName = document.querySelector('.profile__name');
 const userJob = document.querySelector('.profile__job');
 const imgName = document.querySelector('.element__title');
-const imgAddress = document.querySelector('.element__place');
+const imgPlace = document.querySelector('.element__place');
 
 const initialCards = [
   {
@@ -59,6 +60,15 @@ function createCard(item) {
   cadrElement.querySelector('.element__title').textContent = item.name;
   // отображаем на странице
   elementsContainer.prepend(cadrElement);
+  const btnLike = document.querySelector('.element__like');
+  btnLike.addEventListener('click', function () {
+    btnLike.classList.toggle('element__like_black');
+  })
+  const btnDelete = document.querySelector('.element__delete-btn');
+  btnDelete.addEventListener('click', function () {
+    const element = btnDelete.closest('.element');
+    element.remove();
+  })
   return cadrElement;
 }
 // Добавление новой карточки
@@ -80,9 +90,16 @@ function openPopup() {
   inputJob.value = userJob.textContent;
 }
 // Открытие попапа для добавления картинки
-function openImgPopup(evt) {
+function openImgPopup() {
   popupImgAdd.classList.add('popup_opened');
 }
+
+// Открытие попапа с картинкой
+function showImgPopup() {
+  popupImgShow.classList.add('popup_opened');
+
+}
+
 // Закрытие попапа
 function closePopup() {
   popup.classList.remove('popup_opened');
@@ -98,7 +115,6 @@ function savePopup(evt) {
 
 // Лайк карточки
 // Удаление карточки
-// Открытие попапа с картинкой
 // Плавное открытие и закрытие попапов
 
 btnClose.addEventListener('click', closePopup);
@@ -107,3 +123,4 @@ btnEdit.addEventListener('click', openPopup);
 popupContainer.addEventListener("submit", savePopup);
 btnImgAdd.addEventListener('click', openImgPopup);
 popupImgContainer.addEventListener("submit", saveImgPopup);
+// .addEventListener('click', showImgPopup);
