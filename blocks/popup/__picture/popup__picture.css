@@ -1,0 +1,10 @@
+.popup__picture{
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background: transparent;
+  border: none;
+  contain: inherit;
+  width: 816px;
+  height: 540px;
+}

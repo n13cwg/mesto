@@ -18,8 +18,6 @@ const inputImgAddress = document.querySelector('.popup__input_address');
 
 const userName = document.querySelector('.profile__name');
 const userJob = document.querySelector('.profile__job');
-const imgName = document.querySelector('.element__title');
-const imgPlace = document.querySelector('.element__place');
 
 const initialCards = [{
         name: 'Кафе',
@@ -70,7 +68,13 @@ function createCard(item) {
             element.remove();
         })
         // Открытие попапа с картинкой
-
+    const imgPlace = document.querySelector('.element__place');
+    imgPlace.addEventListener('click', function () {
+        popupImgShow.classList.add('popup_opened');
+        const picture = document.querySelector('.popup__image');
+        picture.src = item.link;
+        picture.textContent = item.name;
+    })
     return cadrElement;
 }
 // Добавление новой карточки
