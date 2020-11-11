@@ -2,9 +2,10 @@
   justify-content: center;
   align-items: center;
   margin: auto;
+  padding: 0;
   background: transparent;
-  border: none;
-  contain: inherit;
-  width: 816px;
-  height: 540px;
+  border-radius: 0;
+  contain: content;
+  width: 100%;
+  height: 100%;
 }

@@ -5,6 +5,7 @@ const btnEdit = document.querySelector('.profile__edit-button');
 const btnClose = document.querySelector('.popup__close');
 const btnImgAdd = document.querySelector('.profile__button');
 const btnImgClose = document.querySelector('.popup__close-img');
+const btnClosePicture = document.querySelector('.popup__close-picture');
 
 const elementsContainer = document.querySelector('.elements');
 const popupImgContainer = document.querySelector('.popup__container-img');
@@ -45,7 +46,8 @@ const initialCards = [{
     }
 ];
 // Шесть карточек «из коробки»
-initialCards.forEach(createCard);
+initialCards.forEach((item) => createCard(item));
+// initialCards.forEach(createCard);
 // Добавление карточки
 function createCard(item) {
     const elementTemplate = document.querySelector('#elementTemplate').content;
@@ -72,8 +74,10 @@ function createCard(item) {
     imgPlace.addEventListener('click', function () {
         popupImgShow.classList.add('popup_opened');
         const picture = document.querySelector('.popup__image');
+        const pictureCaption = document.querySelector('.popup__image-caption');
         picture.src = item.link;
-        picture.textContent = item.name;
+        console.log(pictureCaption, item.name);
+        pictureCaption.textContent = item.name;
     })
     return cadrElement;
 }
@@ -103,6 +107,7 @@ function openImgPopup() {
 function closePopup() {
     popup.classList.remove('popup_opened');
     popupImgAdd.classList.remove('popup_opened');
+    popupImgShow.classList.remove('popup_opened');
 }
 // Сохранение данных пользователя на странице
 function savePopup(evt) {
@@ -114,6 +119,7 @@ function savePopup(evt) {
 
 btnClose.addEventListener('click', closePopup);
 btnImgClose.addEventListener('click', closePopup);
+btnClosePicture.addEventListener('click', closePopup);
 btnEdit.addEventListener('click', openPopup);
 popupContainer.addEventListener("submit", savePopup);
 btnImgAdd.addEventListener('click', openImgPopup);
