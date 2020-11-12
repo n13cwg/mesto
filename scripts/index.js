@@ -69,7 +69,7 @@ function createCard(item) {
             const element = btnDelete.closest('.element');
             element.remove();
         })
-        // Открытие попапа с картинкой
+    // Открытие попапа с картинкой
     const imgPlace = document.querySelector('.element__place');
     imgPlace.addEventListener('click', function () {
         popupImgShow.classList.add('popup_opened');

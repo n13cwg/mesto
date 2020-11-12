@@ -1,3 +1,5 @@
 .popup__close-picture {
   z-index: 1;
+  left: 500px;
+  top: 190px;
 }
