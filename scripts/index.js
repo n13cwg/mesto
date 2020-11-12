@@ -46,8 +46,8 @@ const initialCards = [{
     }
 ];
 // Шесть карточек «из коробки»
-initialCards.forEach((item) => createCard(item));
-// initialCards.forEach(createCard);
+initialCards.forEach(createCard);
+// или initialCards.forEach((item) => createCard(item));
 // Добавление карточки
 function createCard(item) {
     const elementTemplate = document.querySelector('#elementTemplate').content;
