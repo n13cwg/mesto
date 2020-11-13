@@ -1,5 +1,5 @@
 const popup = document.querySelector('.popup');
-const popupCreateCard = document.querySelector('.popup__create-card');
+const popupCreateCard = document.querySelector('.popup_create-card');
 
 const btnEdit = document.querySelector('.profile__edit-button');
 const btnClose = document.querySelector('.popup__close');
@@ -10,7 +10,7 @@ const btnClosePicture = document.querySelector('.popup__close-picture');
 const elementsContainer = document.querySelector('.elements');
 const popupCreateContainer = document.querySelector('.popup__create-container');
 const popupContainer = document.querySelector('.popup__container');
-const popupPicture = document.querySelector('.popup__picture');
+const popupPicture = document.querySelector('.popup_picture');
 
 const inputName = document.querySelector('.popup__input_name');
 const inputJob = document.querySelector('.popup__input_job');
@@ -74,7 +74,7 @@ function createCard(item) {
     imgPlace.addEventListener('click', function () {
         popupPicture.classList.add('popup_opened');
         const picture = document.querySelector('.popup__image');
-        const pictureCaption = document.querySelector('.popup__image_caption');
+        const pictureCaption = document.querySelector('.popup_caption');
         picture.src = item.link;
         pictureCaption.textContent = item.name;
     })
