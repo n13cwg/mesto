@@ -27,7 +27,7 @@
   .popup__close {
     height: 30px;
     width: 30px;
-    margin-left: 227px;
-    margin-top: -70px;
+    left: 256px;
+    top: -70px;
   }
 }

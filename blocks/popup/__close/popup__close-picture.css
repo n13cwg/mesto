@@ -1,5 +1,11 @@
 .popup__close-picture {
   z-index: 1;
-  left: 500px;
-  top: 190px;
+  left: 428px;
+  top: -57px;
+}
+@media screen and (max-width: 678px) {
+  .popup__close-picture {
+    left: 259px;
+    top: -43px;
+  }
 }
