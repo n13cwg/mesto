@@ -74,7 +74,7 @@ function createCard(item) {
     imgPlace.addEventListener('click', function () {
         popupPicture.classList.add('popup_opened');
         const picture = document.querySelector('.popup__image');
-        const pictureCaption = document.querySelector('.popup_caption');
+        const pictureCaption = document.querySelector('.popup__caption');
         picture.src = item.link;
         pictureCaption.textContent = item.name;
     })

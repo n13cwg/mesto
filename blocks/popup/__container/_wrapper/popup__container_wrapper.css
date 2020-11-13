@@ -1,4 +1,4 @@
-.popup_wrapper {
+.popup__container_wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
