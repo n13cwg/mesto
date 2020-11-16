@@ -54,35 +54,38 @@ initialCards.forEach(createCard);
 // или initialCards.forEach((item) => createCard(item));
 // Добавление карточки
 function createCard(item) {
-  // const elementTemplate = document.querySelector('#elementTemplate').content;
   // клонируем содержимое тега template
   const cardElement = elementTemplate.cloneNode(true);
+  const btnLike = cardElement.querySelector('.element__like');
+  btnLike.addEventListener('click', (likeCard));
+  const btnDelete = cardElement.querySelector('.element__delete-btn');
+  btnDelete.addEventListener('click', (delCard));
+  const imgPlace = cardElement.querySelector('.element__place');
+  imgPlace.addEventListener('click', (openPopupPicture));
   // наполняем содержимым
   cardElement.querySelector('.element__place').src = item.link;
   cardElement.querySelector('.element__title').textContent = item.name;
   // отображаем на странице
   elementsContainer.prepend(cardElement);
-  // Лайк карточки
-  const btnLike = cardElement.querySelector('.element__like');
-  btnLike.addEventListener('click', function () {
-    btnLike.classList.toggle('element__like_black');
-  });
-  // Удаление карточки
-  const btnDelete = cardElement.querySelector('.element__delete-btn');
-  btnDelete.addEventListener('click', function () {
-    const element = btnDelete.closest('.element');
-    element.remove();
-  })
   // Открытие попапа с картинкой
-  const imgPlace = cardElement.querySelector('.element__place');
-  imgPlace.addEventListener('click', function () {
+function openPopupPicture() {
     popupPicture.classList.add('popup_opened');
-    // const picture = document.querySelector('.popup__image');
-    // const pictureCaption = document.querySelector('.popup__caption');
     picture.src = item.link;
     pictureCaption.textContent = item.name;
-  })
+  }
   return cardElement;
+}
+
+// Лайк карточки
+function likeCard(evt) {
+  evt.preventDefault();
+  evt.target.classList.toggle('element__like_black');
+}
+
+// Удаление карточки
+function delCard(evt) {
+  evt.preventDefault();
+  evt.target.closest('.element').remove();
 }
 
 // Добавление новой карточки
@@ -97,7 +100,6 @@ function saveCard(evt) {
   popupCreateContainer.reset(cardData);
   closePopup();
 }
-
 // Открытие попапа профиля
 function openPopup() {
   popup.classList.add('popup_opened');
