@@ -77,19 +77,6 @@ function createCard(item) {
   }
   return cardElement;
 }
-
-// Лайк карточки
-function likeCard(evt) {
-  evt.preventDefault();
-  evt.target.classList.toggle('element__like_black');
-}
-
-// Удаление карточки
-function delCard(evt) {
-  evt.preventDefault();
-  evt.target.closest('.element').remove();
-}
-
 // Добавление новой карточки
 function saveCard(evt) {
   evt.preventDefault();
@@ -102,15 +89,20 @@ function saveCard(evt) {
   popupCreateContainer.reset(cardData);
   closePopup();
 }
-function openPopup(popup)  {
-  popup.classList.add('popup_opened');
+// Лайк карточки
+function likeCard(evt) {
+  evt.preventDefault();
+  evt.target.classList.toggle('element__like_black');
 }
-// Закрытие попапа
-function closePopup() {
-  popup.classList.remove('popup_opened');
-  // popupUser.classList.remove('popup_opened');
-  popupCreateCard.classList.remove('popup_opened');
-  popupPicture.classList.remove('popup_opened');
+// Удаление карточки
+function delCard(evt) {
+  evt.preventDefault();
+  evt.target.closest('.element').remove();
+}
+// Открытие попапа для добавления картинки
+function openImgPopup() {
+  // popupCreateCard.classList.add('popup_opened');
+  openPopup(popupCreateCard);
 }
 // Открытие попапа профиля
 function openPopupUser() {
@@ -119,30 +111,34 @@ function openPopupUser() {
   inputName.value = userName.textContent;
   inputJob.value = userJob.textContent;
 }
-
-// Открытие попапа для добавления картинки
-function openImgPopup() {
-  // popupCreateCard.classList.add('popup_opened');
-  openPopup(popupCreateCard);
-}
-
 // Сохранение данных пользователя на странице
-function savePopup(evt) {
+function savePopupUser(evt) {
   evt.preventDefault();
   userName.textContent = inputName.value;
   userJob.textContent = inputJob.value;
   closePopup(popupContainer);
 }
+// Открытие попапа
+function openPopup(popup)  {
+  popup.classList.add('popup_opened');
+}
+// Закрытие попапа
+function closePopup(popup) {
+  popup.classList.remove('popup_opened');
+  // popupUser.classList.remove('popup_opened');
+  // popupCreateCard.classList.remove('popup_opened');
+  // popupPicture.classList.remove('popup_opened');
+}
+
 const popup = document.querySelector('.popup');
-const popupUser = document.querySelector('.popup__user');
+const popupUser = document.querySelector('.popup_user');
 const popupCreateCard = document.querySelector('.popup_create-card');
 const popupPicture = document.querySelector('.popup_picture');
 
-
-btnClose.addEventListener('click', closePopup);
-btnImgClose.addEventListener('click', closePopup);
-btnClosePicture.addEventListener('click', closePopup);
+btnClose.addEventListener('click', () => closePopup(popupUser));
+btnImgClose.addEventListener('click', () => closePopup(popupCreateCard));
+btnClosePicture.addEventListener('click', () => closePopup(popupPicture));
 btnEdit.addEventListener('click', openPopupUser);
-popupContainer.addEventListener("submit", savePopup);
+popupContainer.addEventListener("submit", savePopupUser);
 btnImgAdd.addEventListener('click', openImgPopup);
 popupCreateContainer.addEventListener("submit", saveCard);
