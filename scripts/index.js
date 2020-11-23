@@ -120,6 +120,18 @@ function savePopupUser(evt) {
   closePopup(popupUser);
 }
 
+//Функция закрытия попапа кликом по оверлею
+
+//Функция закрытия попапа нажатием Escape
+// function keyHandler(evt) {
+//   if (evt.key === "Enter") {
+//     addSong(artistInput.value, titleInput.value);
+//   }
+// }
+// popup.addEventListener('keydown', keyHandler);
+//
+// popup.addEventListener('keydown', keyHandler);
+
 // Открытие попапа
 function openPopup(popup) {
   popup.classList.add('popup_opened');

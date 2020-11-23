@@ -14,7 +14,9 @@
       <button class="popup__close" type="reset"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
       <input type="text" class="popup__input popup__input_name" value="" name="popup-name" required/>
+      <span lass="popup__input-error" id="profile-name-error"></span>
       <input type="text" class="popup__input popup__input_job" value="" name="popup-job" required/>
+      <span class="popup__input-error" id="profile-job-error"></span>
       <button class="popup__save" type="submit">Сохранить</button>
     </form>
   </div>
@@ -24,7 +26,9 @@
       <button class="popup__close popup__close-create" type="reset"></button>
       <h2 class="popup__title">Новое место</h2>
       <input type="text" class="popup__input popup__input_name-card" value="" name="popup-name-img" required/>
+      <span class="popup__input-error" id="place-name-error"></span>
       <input type="text" class="popup__input popup__input_link" value="" name="popup-link" required/>
+      <span class="popup__input-error" id="place-link-error"></span>
       <button class="popup__save" type="submit">Создать</button>
     </form>
   </div>
@@ -74,7 +78,7 @@
     </div>
   </div>
 </template>
-<script src="./scripts/index.js"></script>
 <script src="./scripts/validate.js"></script>
+<script src="./scripts/index.js"></script>
 </body>
 </html>
