@@ -7,14 +7,6 @@
 // включение валидации вызовом enableValidation
 // все настройки передаются при вызове
 
-// enableValidation({
-//   formSelector: '.popup__container',
-//   inputSelector: '.popup__input',
-//   submitButtonSelector: '.popup__button',
-//   inactiveButtonClass: 'popup__button_disabled', buttonInvalidClass: 'popup__button_invalid',
-//   inputErrorClass: 'popup__input_type_error', inputInvalidClass: 'popup__input_state_invalid',
-//   errorClass: 'popup__error_visible'
-// });
 function showError(form, input, config) {
   const error = form.querySelector(`#${input.id}-error`);
   error.textContent = input.validationMessage;

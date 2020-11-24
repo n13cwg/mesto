@@ -72,7 +72,6 @@ function createCard(item) {
   // Открытие попапа с картинкой
   function openPopupPicture() {
     openPopup(popupPicture);
-    // popupPicture.classList.add('popup_opened');
     picture.src = item.link;
     pictureCaption.textContent = item.name;
   }
@@ -120,17 +119,33 @@ function savePopupUser(evt) {
   closePopup(popupUser);
 }
 
-//Функция закрытия попапа кликом по оверлею
-
-//Функция закрытия попапа нажатием Escape
-// function keyHandler(evt) {
-//   if (evt.key === "Enter") {
-//     addSong(artistInput.value, titleInput.value);
+// //Функция закрытия попапа кликом по оверлею
+// function closePopupByClickOverlay(evt) {
+//   if (evt.target !== evt.currentTarget) {
+//     return
 //   }
+//   closePopup(evt.target);
 // }
-// popup.addEventListener('keydown', keyHandler);
-//
-// popup.addEventListener('keydown', keyHandler);
+// closePopupByClickOverlay();
+
+function clickHandler (evt) {
+
+}
+popup.addEventListener('click', function () {
+  closePopup(document.querySelector('.popup_opened'));
+  console.log('Объявили функцию прямо при добавлении обработчика');
+})
+
+// Событие закрытия попапа нажатием Escape
+function keyHandler(evt) {
+  document.addEventListener('keydown', function (evt) {
+    if (evt.key === 'Escape') {
+      closePopup(document.querySelector('.popup_opened'));
+    }
+  });
+}
+
+keyHandler();
 
 // Открытие попапа
 function openPopup(popup) {
@@ -140,6 +155,8 @@ function openPopup(popup) {
 // Закрытие попапа
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
+  document.removeEventListener('keydown', keyHandler);
+  // popup.removeEventListener('mousedown', closePopupByClickOverlay);
 }
 
 // Закрытие попапа попапа профиля

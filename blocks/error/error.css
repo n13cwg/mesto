@@ -1,9 +1,12 @@
 .error {
+    width: 164px;
+    height: 12px;
+    left: 461px;
+    top: 338px;
+    font-family: Inter, Arial, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: normal;
     font-size: 12px;
-    line-height: 14px;
+    line-height: 15px;
     color: #FF0000;
-    display: block;
-    margin: 4px 0 0 6px;
-    box-sizing: border-box;
-    height: 25px;
   }
