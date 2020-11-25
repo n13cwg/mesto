@@ -120,21 +120,12 @@ function savePopupUser(evt) {
 }
 
 // //Функция закрытия попапа кликом по оверлею
-// function closePopupByClickOverlay(evt) {
-//   if (evt.target !== evt.currentTarget) {
-//     return
-//   }
-//   closePopup(evt.target);
-// }
-// closePopupByClickOverlay();
-
 function clickHandler (evt) {
-
+    if (evt.target !== evt.currentTarget) {
+      return;
+    }
+    closePopup(evt.target);
 }
-popup.addEventListener('click', function () {
-  closePopup(document.querySelector('.popup_opened'));
-  console.log('Объявили функцию прямо при добавлении обработчика');
-})
 
 // Событие закрытия попапа нажатием Escape
 function keyHandler(evt) {
@@ -150,13 +141,14 @@ keyHandler();
 // Открытие попапа
 function openPopup(popup) {
   popup.classList.add('popup_opened');
+  popup.addEventListener('mousedown', clickHandler);
 }
 
 // Закрытие попапа
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
   document.removeEventListener('keydown', keyHandler);
-  // popup.removeEventListener('mousedown', closePopupByClickOverlay);
+  popup.removeEventListener('mousedown', clickHandler);
 }
 
 // Закрытие попапа попапа профиля
