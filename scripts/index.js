@@ -135,7 +135,6 @@ function keyHandler(evt) {
     }
   });
 }
-
 keyHandler();
 
 // Открытие попапа
@@ -158,7 +157,7 @@ btnImgClose.addEventListener('click', () => closePopup(popupCreateCard));
 // Закрытие попапа с картинкой
 btnClosePicture.addEventListener('click', () => closePopup(popupPicture));
 // Открытие попапа профиля
-btnEdit.addEventListener('click', () => openPopup(popupUser));
+btnEdit.addEventListener('click', () => openPopupUser(popupUser));
 // Сохранение данных пользователя на странице
 popupContainer.addEventListener("submit", savePopupUser);
 // Открытие попапа для добавления картинки
