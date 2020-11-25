@@ -1,4 +1,4 @@
-const popup = document.querySelector('.popup');
+// const popup = document.querySelector('.popup');
 const popupUser = document.querySelector('.popup_user');
 const popupCreateCard = document.querySelector('.popup_create-card');
 const popupPicture = document.querySelector('.popup_picture');
@@ -25,10 +25,11 @@ const elementTemplate = document.querySelector('#elementTemplate').content;
 const picture = document.querySelector('.popup__image');
 const pictureCaption = document.querySelector('.popup__caption');
 
-const initialCards = [{
-  name: 'Кафе',
-  link: './images/safar-safarov-MSN8TFhJ0is-unsplash.jpg'
-},
+const initialCards = [
+  {
+    name: 'Кафе',
+    link: './images/safar-safarov-MSN8TFhJ0is-unsplash.jpg'
+  },
   {
     name: 'TODO list',
     link: './images/roman-synkevych-vXInUOv1n84-unsplash.jpg'
@@ -64,7 +65,7 @@ function createCard(item) {
   const imgPlace = cardElement.querySelector('.element__place');
   imgPlace.addEventListener('click', (openPopupPicture));
   // наполняем содержимым
-  cardElement.querySelector('.element__place').src = item.link;
+  imgPlace.src = item.link;
   cardElement.querySelector('.element__title').textContent = item.name;
   // отображаем на странице
   elementsContainer.prepend(cardElement);
@@ -120,34 +121,32 @@ function savePopupUser(evt) {
 }
 
 // //Функция закрытия попапа кликом по оверлею
-function clickHandler (evt) {
-    if (evt.target !== evt.currentTarget) {
-      return;
-    }
-    closePopup(evt.target);
+function closeOverlay(evt) {
+  if (evt.target !== evt.currentTarget) {
+    return;
+  }
+  closePopup(evt.target);
 }
 
 // Событие закрытия попапа нажатием Escape
-function keyHandler(evt) {
-  document.addEventListener('keydown', function (evt) {
+function closeEscape(evt) {
     if (evt.key === 'Escape') {
       closePopup(document.querySelector('.popup_opened'));
     }
-  });
 }
-keyHandler();
 
 // Открытие попапа
 function openPopup(popup) {
   popup.classList.add('popup_opened');
-  popup.addEventListener('mousedown', clickHandler);
+  popup.addEventListener('mousedown', closeOverlay);
+  document.addEventListener('keydown', closeEscape);
 }
 
 // Закрытие попапа
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
-  document.removeEventListener('keydown', keyHandler);
-  popup.removeEventListener('mousedown', clickHandler);
+  document.removeEventListener('keydown', closeEscape);
+  popup.removeEventListener('mousedown', closeOverlay);
 }
 
 // Закрытие попапа попапа профиля
