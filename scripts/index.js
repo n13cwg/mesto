@@ -59,7 +59,7 @@ function createCard(item) {
   // клонируем содержимое тега template
   const cardElement = elementTemplate.cloneNode(true);
   const btnLike = cardElement.querySelector('.element__like');
-  btnLike.addEventListener('click', (likeCard));
+  btnLike.addEventListener('click', likeCard);
   const btnDelete = cardElement.querySelector('.element__delete-btn');
   btnDelete.addEventListener('click', (delCard));
   const imgPlace = cardElement.querySelector('.element__place');
