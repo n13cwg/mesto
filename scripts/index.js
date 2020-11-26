@@ -61,9 +61,9 @@ function createCard(item) {
   const btnLike = cardElement.querySelector('.element__like');
   btnLike.addEventListener('click', likeCard);
   const btnDelete = cardElement.querySelector('.element__delete-btn');
-  btnDelete.addEventListener('click', (delCard));
+  btnDelete.addEventListener('click', delCard);
   const imgPlace = cardElement.querySelector('.element__place');
-  imgPlace.addEventListener('click', (openPopupPicture));
+  imgPlace.addEventListener('click', openPopupPicture);
   // наполняем содержимым
   imgPlace.src = item.link;
   cardElement.querySelector('.element__title').textContent = item.name;
