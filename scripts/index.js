@@ -130,9 +130,9 @@ function closeOverlay(evt) {
 
 // Событие закрытия попапа нажатием Escape
 function closeEscape(evt) {
-    if (evt.key === 'Escape') {
-      closePopup(document.querySelector('.popup_opened'));
-    }
+  if (evt.key === 'Escape') {
+    closePopup(document.querySelector('.popup_opened'));
+  }
 }
 
 // Открытие попапа
