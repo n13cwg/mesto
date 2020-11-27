@@ -17,7 +17,7 @@ const validationConfig = {
 // Показать ошибку
 function showError(form, input, config) {
   const error = form.querySelector(`#${input.id}-error`);
-  error.textContent = input.validationMessage;
+  error.textContent = input.validationMessage; // validationMessage - локализованное сообщение, описывающее ограничения валидности, которым элемент управления не соответствует
   input.classList.add(config.inputInvalidClass);
 }
 
@@ -30,6 +30,7 @@ function hideError(form, input, config) {
 
 // Проверка поля ввода на валидность
 function checkInputValidity(form, input, config) {
+  // validity.valid - возвращает true если значение элемента не имеет проблем с валидностью; в противном случае false
   if (!input.validity.valid) {
     showError(form, input, config);
   } else {
