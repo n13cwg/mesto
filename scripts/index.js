@@ -1,4 +1,6 @@
-// const popup = document.querySelector('.popup');
+// import Card from './Card.js';
+// import FormValidator from './FormValidator.js';
+
 const popupUser = document.querySelector('.popup_user');
 const popupCreateCard = document.querySelector('.popup_create-card');
 const popupPicture = document.querySelector('.popup_picture');
