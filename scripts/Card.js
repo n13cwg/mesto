@@ -17,7 +17,12 @@ export default class Card {
         return cardElement;
     }
     generateCard() {
+        // Запишем разметку в приватное поле _element. 
+        // Так у других элементов появится доступ к ней
         this._element = this._getTemplate();
+        // Добавим данные
+        this._element.querySelector('.element__place').src = this._link;
+        this._element.querySelector('.element__title').textContent = this._name;
         //     evt.preventDefault();
         //     const cardData = {
         //         name: inputCardName.value,
