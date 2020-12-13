@@ -1,4 +1,4 @@
-import {config, items} from './utils.js';
+import {validationConfig, items} from './utils.js';
 import Card from './Card.js';
 import FormValidator from './FormValidator.js';
 
@@ -75,5 +75,5 @@ items.btnImgAdd.addEventListener('click', () => openPopup(items.popupCreateCard)
 // Сохранение карточки
 items.popupCreateContainer.addEventListener('submit', saveCard);
 
-const formValidator = new FormValidator(config, config.formSelector);
+const formValidator = new FormValidator(validationConfig, validationConfig.formSelector);
 formValidator.enableValidation();
