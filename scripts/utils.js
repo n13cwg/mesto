@@ -2,6 +2,8 @@ export const items = {
   popupUser: document.querySelector('.popup_user'),
   popupCreateCard: document.querySelector('.popup_create-card'),
   popupPicture: document.querySelector('.popup_picture'),
+  popupCreateContainer: document.querySelector('.popup__create-container'),
+  popupContainer: document.querySelector('.popup__container'),
 
   btnEdit: document.querySelector('.profile__edit-button'),
   btnClose: document.querySelector('.popup__close'),
@@ -10,9 +12,10 @@ export const items = {
   btnClosePicture: document.querySelector('.popup__close-picture'),
 
   elementsContainer: document.querySelector('.elements'),
-  popupCreateContainer: document.querySelector('.popup__create-container'),
-  popupContainer: document.querySelector('.popup__container'),
-
+  elementTemplate: document.querySelector('#elementTemplate').content,
+  picture: document.querySelector('.popup__image'),
+  pictureCaption: document.querySelector('.popup__caption'),
+  
   inputName: document.querySelector('.popup__input_name'),
   inputJob: document.querySelector('.popup__input_job'),
   inputCardName: document.querySelector('.popup__input_name-card'),
@@ -20,10 +23,6 @@ export const items = {
 
   userName: document.querySelector('.profile__name'),
   userJob: document.querySelector('.profile__job'),
-
-  elementTemplate: document.querySelector('#elementTemplate').content,
-  picture: document.querySelector('.popup__image'),
-  pictureCaption: document.querySelector('.popup__caption'),
 }
 
 export const initialCards = [{

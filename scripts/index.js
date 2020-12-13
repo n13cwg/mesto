@@ -1,40 +1,6 @@
 import {config, items} from './utils.js';
 import Card from './Card.js';
 import FormValidator from './FormValidator.js';
-
-// Шесть карточек «из коробки»
-
-// или initialCards.forEach((item) => createCard(item));
-// Добавление карточки
-// function createCard(item) {
-  // клонируем содержимое тега template
-  // const cardElement = elementTemplate.cloneNode(true);
-  // const btnLike = cardElement.querySelector('.element__like');
-  // btnLike.addEventListener('click', likeCard);
-  // const btnDelete = cardElement.querySelector('.element__delete-btn');
-  // btnDelete.addEventListener('click', delCard);
-  // const imgPlace = cardElement.querySelector('.element__place');
-  // imgPlace.addEventListener('click', openPopupPicture);
-  // // наполняем содержимым
-  // imgPlace.src = item.link;
-  // cardElement.querySelector('.element__title').textContent = item.name;
-  // // отображаем на странице
-  // elementsContainer.prepend(cardElement);
-
-  // Открытие попапа с картинкой
-//  function openPopupPicture() {
-//     openPopup(popupPicture);
-//     picture.src = item.link;
-//     pictureCaption.textContent = item.name;
-//   };
-
-//   return cardElement;
-// }
-//  function openPopupPicture() {
-//     openPopup(items.popupPicture);
-//     items.pictureCaption.src = item.link;
-//     items.picture.textContent = item.name;
-//   }
   
 // Добавление новой карточки
 function saveCard(evt) {
