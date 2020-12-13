@@ -13,6 +13,7 @@
   padding-bottom: 7.3px;
   margin: 25px 0 0;
 }
+
 .popup__input:invalid {
   border-bottom: 1px solid red;
 }

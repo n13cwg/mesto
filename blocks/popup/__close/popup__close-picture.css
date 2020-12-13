@@ -3,6 +3,7 @@
   left: 428px;
   top: -57px;
 }
+
 @media screen and (max-width: 678px) {
   .popup__close-picture {
     left: 259px;
