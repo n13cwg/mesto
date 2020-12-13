@@ -1,7 +1,7 @@
 import {config, items} from './utils.js';
 import Card from './Card.js';
 import FormValidator from './FormValidator.js';
-  
+
 // Добавление новой карточки
 function saveCard(evt) {
   evt.preventDefault();

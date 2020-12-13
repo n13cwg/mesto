@@ -15,7 +15,7 @@ export const items = {
   elementTemplate: document.querySelector('#elementTemplate').content,
   picture: document.querySelector('.popup__image'),
   pictureCaption: document.querySelector('.popup__caption'),
-  
+
   inputName: document.querySelector('.popup__input_name'),
   inputJob: document.querySelector('.popup__input_job'),
   inputCardName: document.querySelector('.popup__input_name-card'),
@@ -28,7 +28,7 @@ export const items = {
 export const initialCards = [{
   name: 'Кафе',
   link: './images/safar-safarov-MSN8TFhJ0is-unsplash.jpg'
-  },
+},
   {
     name: 'TODO list',
     link: './images/roman-synkevych-vXInUOv1n84-unsplash.jpg'
