@@ -24,8 +24,6 @@ export const items = {
   elementTemplate: document.querySelector('#elementTemplate').content,
   picture: document.querySelector('.popup__image'),
   pictureCaption: document.querySelector('.popup__caption'),
-
-  imgPlace: document.querySelector('.element__place'),
 }
 
 export const initialCards = [{

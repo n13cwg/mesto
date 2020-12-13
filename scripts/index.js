@@ -30,11 +30,11 @@ import FormValidator from './FormValidator.js';
 
 //   return cardElement;
 // }
- function openPopupPicture() {
-    openPopup(items.popupPicture);
-    items.pictureCaption.src = item.link;
-    items.picture.textContent = item.name;
-  }
+//  function openPopupPicture() {
+//     openPopup(items.popupPicture);
+//     items.pictureCaption.src = item.link;
+//     items.picture.textContent = item.name;
+//   }
   
 // Добавление новой карточки
 function saveCard(evt) {
@@ -81,7 +81,7 @@ function closeEscape(evt) {
 }
 
 // Открытие попапа
-function openPopup(popup) {
+export function openPopup(popup) {
   popup.classList.add('popup_opened');
   popup.addEventListener('mousedown', closeOverlay);
   document.addEventListener('keydown', closeEscape);
@@ -108,8 +108,6 @@ items.popupContainer.addEventListener('submit', savePopupUser);
 items.btnImgAdd.addEventListener('click', () => openPopup(items.popupCreateCard));
 // Сохранение карточки
 items.popupCreateContainer.addEventListener('submit', saveCard);
-
-items.imgPlace.addEventListener('click', openPopupPicture);
 
 const formValidator = new FormValidator(config, config.formSelector);
 formValidator.enableValidation();

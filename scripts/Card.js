@@ -1,4 +1,5 @@
 import {items, initialCards} from './utils.js';
+import {openPopup} from './index.js';
 
 export default class Card {
 	constructor(items, cardSelector) {
@@ -29,9 +30,18 @@ export default class Card {
 	_delCard() {
 		this._element.closest('.element').remove();
 	}
+	_openPopupPicture() {
+    openPopup(items.popupPicture);
+    const popupCaption = document.querySelector('.popup__caption');
+    const popupImg = document.querySelector('.popup__image');
+    const img = this._element.querySelector('.element__place');
+    popupImg.src = img.src;
+    popupCaption.textContent = img.name;
+  }
 	_setEventListeners() {
 		this._element.querySelector('.element__like').addEventListener('click', () => this._likeCard());
 		this._element.querySelector('.element__delete-btn').addEventListener('click', () => this._delCard());
+		this._element.querySelector('.element__place').addEventListener('click', () => this._openPopupPicture());
 	}
 }
 initialCards.forEach((item) => {
