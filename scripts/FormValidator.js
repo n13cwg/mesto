@@ -1,8 +1,6 @@
-import {config} from './utils.js';
-
 export default class FormValidator {
   constructor(config) {
-    this.config = config;
+    this._config = config;
     this._formSelector = config.formSelector;
     this._inputSelector = config.inputSelector;
     this._submitButtonSelector = config.submitButtonSelector;
@@ -52,7 +50,7 @@ _showError(form, input) {
   inputsList.forEach((input) => {
     input.addEventListener('input', () => {
       this._checkInputValidity(form, input);
-      this._setButtonState(submitButton, form.this._checkValidity());
+      this._setButtonState(submitButton, form.checkValidity());
     });
   });
 }
@@ -69,7 +67,7 @@ _showError(form, input) {
     // задали правильное сосояние кнопки
     // (при открытии формы кнопка не активна пока не будут введены правильные данные)
     const submitButton = form.querySelector(this._config.submitButtonSelector);
-    this._setButtonState(submitButton, form.this._checkValidity(), this._config);
+    this._setButtonState(submitButton, form.checkValidity(), this._config);
   });
 }
 }

@@ -36,7 +36,7 @@ export default class Card {
 	}
 }
 initialCards.forEach((item) => {
-	const card = new Card(item, '.elTemplate');
+	const card = new Card(item, '#elementTemplate');
 	const cardElement = card.generateCard();
 	items.elementsContainer.prepend(cardElement);
 });

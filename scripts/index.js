@@ -42,7 +42,7 @@ function saveCard(evt) {
     name: items.inputCardName.value,
     link: items.inputImgLink.value
   };
-  const card = new Card(cardData, '.elTemplate');
+  const card = new Card(cardData, '#elementTemplate');
   const cardElement = card.generateCard();
   items.elementsContainer.prepend(cardElement);
   items.popupCreateContainer.reset(cardData);
@@ -115,11 +115,11 @@ items.btnClosePicture.addEventListener('click', () => closePopup(items.popupPict
 // Открытие попапа профиля
 items.btnEdit.addEventListener('click', () => openPopupUser(items.popupUser));
 // Сохранение данных пользователя на странице
-// items.PopupContainer.addEventListener("submit", savePopupUser);
+items.popupContainer.addEventListener("submit", savePopupUser);
 // Открытие попапа для добавления картинки
 items.btnImgAdd.addEventListener('click', () => openPopup(items.popupCreateCard));
 // Сохранение карточки
 items.popupCreateContainer.addEventListener("submit", saveCard);
 
-const formValidator = new FormValidator(config, formSelector);
+const formValidator = new FormValidator(config, config.formSelector);
 formValidator.enableValidation();
