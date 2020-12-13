@@ -31,10 +31,11 @@ import FormValidator from './FormValidator.js';
 //   return cardElement;
 // }
  function openPopupPicture() {
-    openPopup(popupPicture);
-    picture.src = item.link;
-    pictureCaption.textContent = item.name;
-  };
+    openPopup(items.popupPicture);
+    items.pictureCaption.src = item.link;
+    items.picture.textContent = item.name;
+  }
+  
 // Добавление новой карточки
 function saveCard(evt) {
   evt.preventDefault();
@@ -48,19 +49,6 @@ function saveCard(evt) {
   items.popupCreateContainer.reset(cardData);
   closePopup(items.popupCreateCard);
 }
-
-// Лайк карточки
-
-// function likeCard(evt) {
-//   evt.preventDefault();
-//   evt.target.classList.toggle('element__like_black');
-// }
-
-// Удаление карточки
-// function delCard(evt) {
-//   evt.preventDefault();
-//   evt.target.closest('.element').remove();
-// }
 
 // Открытие попапа профиля
 function openPopupUser() {
@@ -115,11 +103,13 @@ items.btnClosePicture.addEventListener('click', () => closePopup(items.popupPict
 // Открытие попапа профиля
 items.btnEdit.addEventListener('click', () => openPopupUser(items.popupUser));
 // Сохранение данных пользователя на странице
-items.popupContainer.addEventListener("submit", savePopupUser);
+items.popupContainer.addEventListener('submit', savePopupUser);
 // Открытие попапа для добавления картинки
 items.btnImgAdd.addEventListener('click', () => openPopup(items.popupCreateCard));
 // Сохранение карточки
-items.popupCreateContainer.addEventListener("submit", saveCard);
+items.popupCreateContainer.addEventListener('submit', saveCard);
+
+items.imgPlace.addEventListener('click', openPopupPicture);
 
 const formValidator = new FormValidator(config, config.formSelector);
 formValidator.enableValidation();

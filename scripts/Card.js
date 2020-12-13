@@ -1,4 +1,3 @@
-// import { openPopup, openPopupPicture } from './index.js';
 import {items, initialCards} from './utils.js';
 
 export default class Card {

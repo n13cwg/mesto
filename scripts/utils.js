@@ -24,6 +24,10 @@ userJob: document.querySelector('.profile__job'),
 elementTemplate: document.querySelector('#elementTemplate').content,
 picture: document.querySelector('.popup__image'),
 pictureCaption: document.querySelector('.popup__caption'),
+
+imgPlace: document.querySelector('.element__place'),
+// popupImgTitle: document.querySelector('.popup__caption'),
+// popupImgLink: document.querySelector('.popup__image'),
 }
 
 export const initialCards = [{
