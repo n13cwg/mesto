@@ -31,12 +31,9 @@ export default class Card {
 		this._element.closest('.element').remove();
 	}
 	_openPopupPicture() {
-    openPopup(items.popupPicture);
-    const popupCaption = document.querySelector('.popup__caption');
-    const popupImg = document.querySelector('.popup__image');
-    const img = this._element.querySelector('.element__place');
-    popupImg.src = img.src;
-    popupCaption.textContent = img.name;
+		openPopup(items.popupPicture);
+    items.picture.src = this._element.querySelector('.element__place').src;
+    items.pictureCaption.textContent = this._element.querySelector('.element__place').name;
   }
 	_setEventListeners() {
 		this._element.querySelector('.element__like').addEventListener('click', () => this._likeCard());
