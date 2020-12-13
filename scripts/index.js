@@ -1,5 +1,6 @@
 import {validationConfig, items} from './utils.js';
 import Card from './Card.js';
+// import Popup from './Popup.js';
 import FormValidator from './FormValidator.js';
 
 // Добавление новой карточки
