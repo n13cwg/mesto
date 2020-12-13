@@ -1,39 +1,37 @@
 export const items = {
-popupUser: document.querySelector('.popup_user'),
-popupCreateCard: document.querySelector('.popup_create-card'),
-popupPicture: document.querySelector('.popup_picture'),
+  popupUser: document.querySelector('.popup_user'),
+  popupCreateCard: document.querySelector('.popup_create-card'),
+  popupPicture: document.querySelector('.popup_picture'),
 
-btnEdit: document.querySelector('.profile__edit-button'),
-btnClose: document.querySelector('.popup__close'),
-btnImgAdd: document.querySelector('.profile__button'),
-btnImgClose: document.querySelector('.popup__close-create'),
-btnClosePicture: document.querySelector('.popup__close-picture'),
+  btnEdit: document.querySelector('.profile__edit-button'),
+  btnClose: document.querySelector('.popup__close'),
+  btnImgAdd: document.querySelector('.profile__button'),
+  btnImgClose: document.querySelector('.popup__close-create'),
+  btnClosePicture: document.querySelector('.popup__close-picture'),
 
-elementsContainer: document.querySelector('.elements'),
-popupCreateContainer: document.querySelector('.popup__create-container'),
-popupContainer: document.querySelector('.popup__container'),
+  elementsContainer: document.querySelector('.elements'),
+  popupCreateContainer: document.querySelector('.popup__create-container'),
+  popupContainer: document.querySelector('.popup__container'),
 
-inputName: document.querySelector('.popup__input_name'),
-inputJob: document.querySelector('.popup__input_job'),
-inputCardName: document.querySelector('.popup__input_name-card'),
-inputImgLink: document.querySelector('.popup__input_link'),
+  inputName: document.querySelector('.popup__input_name'),
+  inputJob: document.querySelector('.popup__input_job'),
+  inputCardName: document.querySelector('.popup__input_name-card'),
+  inputImgLink: document.querySelector('.popup__input_link'),
 
-userName: document.querySelector('.profile__name'),
-userJob: document.querySelector('.profile__job'),
+  userName: document.querySelector('.profile__name'),
+  userJob: document.querySelector('.profile__job'),
 
-elementTemplate: document.querySelector('#elementTemplate').content,
-picture: document.querySelector('.popup__image'),
-pictureCaption: document.querySelector('.popup__caption'),
+  elementTemplate: document.querySelector('#elementTemplate').content,
+  picture: document.querySelector('.popup__image'),
+  pictureCaption: document.querySelector('.popup__caption'),
 
-imgPlace: document.querySelector('.element__place'),
-// popupImgTitle: document.querySelector('.popup__caption'),
-// popupImgLink: document.querySelector('.popup__image'),
+  imgPlace: document.querySelector('.element__place'),
 }
 
 export const initialCards = [{
   name: 'Кафе',
   link: './images/safar-safarov-MSN8TFhJ0is-unsplash.jpg'
-},
+  },
   {
     name: 'TODO list',
     link: './images/roman-synkevych-vXInUOv1n84-unsplash.jpg'
