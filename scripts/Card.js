@@ -17,6 +17,7 @@ export default class Card {
     this._element = this._getTemplate();
     this._setEventListeners();
     this._element.querySelector('.element__place').src = this._link;
+    this._element.querySelector('.element__place').alt = this._name;
     this._element.querySelector('.element__title').textContent = this._name;
 
     return this._element;
@@ -42,8 +43,3 @@ export default class Card {
     this._element.querySelector('.element__place').addEventListener('click', () => this._openPopupPicture());
   }
 }
-initialCards.forEach((item) => {
-  const card = new Card(item, '#elementTemplate');
-  const cardElement = card.generateCard();
-  items.elementsContainer.prepend(cardElement);
-});
