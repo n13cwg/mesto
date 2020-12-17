@@ -10,6 +10,7 @@ function saveCard(evt) {
         name: items.inputCardName.value,
         link: items.inputImgLink.value
     };
+    items.btnImgSave.disabled = true;
     const card = new Card(cardData, '#elementTemplate');
     const cardElement = card.generateCard();
     items.elementsContainer.prepend(cardElement);
