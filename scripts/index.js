@@ -10,7 +10,6 @@ function saveCard(evt) {
         name: items.inputCardName.value,
         link: items.inputImgLink.value
     };
-    items.btnImgSave.disabled = true;
     const card = new Card(cardData, '#elementTemplate');
     const cardElement = card.generateCard();
     items.elementsContainer.prepend(cardElement);
@@ -59,6 +58,7 @@ export function openPopup(popup) {
     popup.classList.add('popup_opened');
     popup.addEventListener('mousedown', closeOverlay);
     document.addEventListener('keydown', closeEscape);
+    formValidator.resetValidation();
 }
 
 // Закрытие попапа
@@ -83,5 +83,6 @@ items.btnImgAdd.addEventListener('click', () => openPopup(items.popupCreateCard)
 // Сохранение карточки
 items.popupCreateContainer.addEventListener('submit', saveCard);
 
-const formValidator = new FormValidator(validationConfig, validationConfig.formSelector);
+const formValidator = new FormValidator(validationConfig, validationConfig.formSelector, validationConfig.inputSelector);
 formValidator.enableValidation();
+formValidator.resetValidation();

@@ -14,7 +14,7 @@
   margin: 25px 0 0;
 }
 
-.popup__input:invalid {
+.popup__input:invalid:not(:focus):not(:placeholder-shown) {
   border-bottom: 1px solid red;
 }
 

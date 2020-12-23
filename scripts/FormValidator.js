@@ -71,4 +71,13 @@ export default class FormValidator {
             this._setButtonState(submitButton, form.checkValidity(), this._config);
         });
     }
+
+    resetValidation(form, config) {
+        const inputsList = form.querySelectorAll(this._config.inputSelector);
+        inputsList.forEach((input) => {
+            this._hideError(input)
+        });
+        const button = this._form.querySelector(this._config.submitButtonSelector);
+        this._setButtonState(inputsList, button);
+    }
 }
