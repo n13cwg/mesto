@@ -10,12 +10,12 @@ function saveCard(evt) {
         name: items.inputCardName.value,
         link: items.inputImgLink.value
     };
-    const btnImgSave = document.querySelector('.popup__button');
-    btnImgSave.disabled=true;
     const card = new Card(cardData, '#elementTemplate');
     const cardElement = card.generateCard();
     items.elementsContainer.prepend(cardElement);
     items.popupCreateContainer.reset(cardData);
+    const btnImgSave = items.popupCreateContainer.querySelector('.popup__save');
+    btnImgSave.disabled = false;
     closePopup(items.popupCreateCard);
 }
 
