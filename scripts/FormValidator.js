@@ -77,7 +77,7 @@ export default class FormValidator {
         inputsList.forEach((input) => {
             this._hideError(input)
         });
-        const button = this._form.querySelector(this._config.submitButtonSelector);
-        this._setButtonState(inputsList, button);
+        const submitButton = form.querySelector(this._config.submitButtonSelector);
+        this._setButtonState(inputsList, submitButton);
     }
 }

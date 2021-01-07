@@ -14,6 +14,7 @@ function saveCard(evt) {
     const cardElement = card.generateCard();
     items.elementsContainer.prepend(cardElement);
     items.popupCreateContainer.reset(cardData);
+    
     closePopup(items.popupCreateCard);
 }
 
@@ -58,7 +59,7 @@ export function openPopup(popup) {
     popup.classList.add('popup_opened');
     popup.addEventListener('mousedown', closeOverlay);
     document.addEventListener('keydown', closeEscape);
-    formValidator.resetValidation();
+    // formValidator.resetValidation();
 }
 
 // Закрытие попапа
