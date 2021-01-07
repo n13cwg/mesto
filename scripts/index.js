@@ -10,11 +10,12 @@ function saveCard(evt) {
         name: items.inputCardName.value,
         link: items.inputImgLink.value
     };
+    const btnImgSave = document.querySelector('.popup__button');
+    btnImgSave.disabled=true;
     const card = new Card(cardData, '#elementTemplate');
     const cardElement = card.generateCard();
     items.elementsContainer.prepend(cardElement);
     items.popupCreateContainer.reset(cardData);
-    
     closePopup(items.popupCreateCard);
 }
 
@@ -84,6 +85,5 @@ items.btnImgAdd.addEventListener('click', () => openPopup(items.popupCreateCard)
 // Сохранение карточки
 items.popupCreateContainer.addEventListener('submit', saveCard);
 
-const formValidator = new FormValidator(validationConfig, validationConfig.formSelector, validationConfig.inputSelector);
+const formValidator = new FormValidator(validationConfig, validationConfig.formSelector); 
 formValidator.enableValidation();
-formValidator.resetValidation();

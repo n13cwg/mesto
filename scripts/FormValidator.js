@@ -72,12 +72,4 @@ export default class FormValidator {
         });
     }
 
-    resetValidation(form, config) {
-        const inputsList = form.querySelectorAll(this._config.inputSelector);
-        inputsList.forEach((input) => {
-            this._hideError(input)
-        });
-        const submitButton = form.querySelector(this._config.submitButtonSelector);
-        this._setButtonState(inputsList, submitButton);
-    }
 }

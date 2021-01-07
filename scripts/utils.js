@@ -10,7 +10,7 @@ export const items = {
   btnImgAdd: document.querySelector('.profile__button'),
   btnImgClose: document.querySelector('.popup__close-create'),
   btnClosePicture: document.querySelector('.popup__close-picture'),
-  // btnImgSave: document.querySelector('.popup__save'),
+  // btnImgSave: document.querySelector('.popup__button'),
 
   elementsContainer: document.querySelector('.elements'),
   elementTemplate: document.querySelector('#elementTemplate').content,
