@@ -15,7 +15,7 @@ function saveCard(evt) {
     items.elementsContainer.prepend(cardElement);
     items.popupCreateContainer.reset(cardData);
     const btnImgSave = items.popupCreateContainer.querySelector('.popup__save');
-    btnImgSave.disabled = false;
+    btnImgSave.disabled = true;
     closePopup(items.popupCreateCard);
 }
 
