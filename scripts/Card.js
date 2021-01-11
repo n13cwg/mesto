@@ -1,45 +1,51 @@
-import {items} from './utils.js';
-import {openPopup} from './index.js';
+import { items } from './utils.js';
+import { openPopup } from './index.js';
 
 export default class Card {
-  constructor(items, cardSelector) {
-    this._name = items.name;
-    this._link = items.link;
-    this._cardSelector = cardSelector;
-  }
+    constructor(items, cardSelector) {
+        this._name = items.name;
+        this._link = items.link;
+        this._cardSelector = cardSelector;
+    }
 
-  _getTemplate() {
-    const cardElement = document.querySelector(this._cardSelector).content.querySelector('.element').cloneNode(true);
-    return cardElement;
-  }
+    _getTemplate() {
+        const cardElement = document.querySelector(this._cardSelector).content.querySelector('.element').cloneNode(true);
+        return cardElement;
+    }
 
-  generateCard() {
-    this._element = this._getTemplate();
-    this._setEventListeners();
-    this._element.querySelector('.element__place').src = this._link;
-    this._element.querySelector('.element__place').alt = this._name;
-    this._element.querySelector('.element__title').textContent = this._name;
+    generateCard() {
+        this._element = this._getTemplate();
+        this._elCardPlace = this._element.querySelector('.element__place');
+        this._elCardTitle = this._element.querySelector('.element__title');
+        this._btnLike = this._element.querySelector('.element__like');
+        this._btnDelete = this._element.querySelector('.element__delete-btn');
+        this._elCardPlace.src = this._link;
+        this._elCardPlace.alt = this._name;
+        this._elCardTitle.textContent = this._name;
 
-    return this._element;
-  }
+        this._setEventListeners();
+        return this._element;
 
-  _likeCard() {
-    this._element.querySelector('.element__like').classList.toggle('element__like_black');
-  }
+    }
 
-  _delCard() {
-    this._element.closest('.element').remove();
-  }
+    _likeCard() {
+        this._btnLike.classList.toggle('element__like_black');
+    }
 
-  _openPopupPicture() {
-    openPopup(items.popupPicture);
-    items.picture.src = this._element.querySelector('.element__place').src;
-    items.pictureCaption.textContent = this._element.querySelector('.element__place').name;
-  }
+    _delCard() {
+        this._elCardTmplt = this._element.closest('.element');
+        this._elCardTmplt.remove();
+    }
 
-  _setEventListeners() {
-    this._element.querySelector('.element__like').addEventListener('click', () => this._likeCard());
-    this._element.querySelector('.element__delete-btn').addEventListener('click', () => this._delCard());
-    this._element.querySelector('.element__place').addEventListener('click', () => this._openPopupPicture());
-  }
+    _openPopupPicture() {
+        openPopup(items.popupPicture);
+        items.picture.src = this._elCardPlace.src;
+        items.pictureCaption.textContent = this._elCardPlace.name;
+    }
+
+    _setEventListeners() {
+        this._btnLike.addEventListener('click', () => this._likeCard());
+        this._btnDelete.addEventListener('click', () => this._delCard());
+        this._elCardPlace.addEventListener('click', () => this._openPopupPicture());
+    }
 }
