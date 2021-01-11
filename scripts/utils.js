@@ -10,7 +10,12 @@ export const items = {
   btnImgAdd: document.querySelector('.profile__button'),
   btnImgClose: document.querySelector('.popup__close-create'),
   btnClosePicture: document.querySelector('.popup__close-picture'),
+  // btnLike: document.querySelector('.element__like'),
+  // btnDelete: document.querySelector('.element__delete-btn'),
 
+  // elCardTmplt: document.querySelector('.element'),
+  // elCardPlace: document.querySelector('.element__place'),
+  // elCardTitle: document.querySelector('.element__title'),
   elementsContainer: document.querySelector('.elements'),
   elementTemplate: document.querySelector('#elementTemplate').content,
   picture: document.querySelector('.popup__image'),

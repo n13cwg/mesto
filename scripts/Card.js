@@ -1,4 +1,4 @@
-import {initialCards, items} from './utils.js';
+import {items} from './utils.js';
 import {openPopup} from './index.js';
 
 export default class Card {
