@@ -5,19 +5,19 @@ import FormValidator from './FormValidator.js'
 
 // Добавление новой карточки
 function saveCard(evt) {
-  evt.preventDefault()
+  evt.preventDefault();
   const cardData = {
     name: items.inputCardName.value,
     link: items.inputImgLink.value,
   }
-  const card = new Card(cardData, '#elementTemplate')
-  const cardElement = card.generateCard()
-  items.elementsContainer.prepend(cardElement)
-  items.popupCreateContainer.reset()
-  const btnImgSave = items.popupCreateContainer.querySelector('.popup__save')
-  btnImgSave.disabled = true
-  btnImgSave.classList.add('popup__button_invalid')
-  closePopup(items.popupCreateCard)
+  const card = new Card(cardData, '#elementTemplate');
+  const cardElement = card.generateCard();
+  items.elementsContainer.prepend(cardElement);
+  items.popupCreateContainer.reset();
+  const btnImgSave = items.popupCreateContainer.querySelector('.popup__save');
+  btnImgSave.disabled = true;
+  btnImgSave.classList.add('popup__button_invalid');
+  closePopup(items.popupCreateCard);
 }
 
 initialCards.forEach((item) => {
