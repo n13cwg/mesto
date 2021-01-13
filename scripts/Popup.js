@@ -1,19 +1,22 @@
 import {items} from './utils.js';
-// export default
-class Popup {
+
+export default class Popup {
   constructor(popup) {
     this._popup = popup;
   }
 
-  _open() {
+  open() {
     this._popup.classList.add('popup_opened');
   }
 
-  _close() {
+  close() {
     this._popup.classList.remove('popup_opened');
   }
 
-  _setEventListeners() {
+  _handleEscClose() {
+
+  }
+  setEventListeners() {
 
   }
 }
@@ -23,7 +26,7 @@ class OpenPopupUser extends Popup {
     super(popup);
   }
 
-  _setEventListeners() {
+  setEventListeners() {
 
   }
 

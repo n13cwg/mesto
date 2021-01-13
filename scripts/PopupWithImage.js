@@ -1,1 +1,5 @@
-class PopupWithImage {}
+export default class PopupWithImage {
+  constructor() {
+    
+  }
+}
