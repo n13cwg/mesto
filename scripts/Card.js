@@ -9,14 +9,16 @@ export default class Card {
   }
 
   _getTemplate() {
-    const cardElement = document
+    const cardElement = document // брём содержимое template-элемента с селектором cardSelector
       .querySelector(this._cardSelector)
-      .content.querySelector('.element')
-      .cloneNode(true)
-    return cardElement
+      .content.querySelector('.element') // достаём из него элемент с классом .element
+      .cloneNode(true) // клонировать
+
+    return cardElement // возвращаем клонированный элемент
   }
 
   generateCard() {
+    // запиcываем разметку в поле _element
     this._element = this._getTemplate()
     this._elCardPlace = this._element.querySelector('.element__place')
     this._elCardTitle = this._element.querySelector('.element__title')
