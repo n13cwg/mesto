@@ -2,93 +2,89 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta charset="UTF-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Mesto</title>
-  <link href="./pages/index.css" rel="stylesheet"/>
+  <link href="./pages/index.css" rel="stylesheet" />
 </head>
 
 <body>
-<div class="page">
-  <div class="popup popup_user">
-    <form class="popup__container popup__form" name="form-container">
-      <button class="popup__close" type="reset"></button>
-      <h2 class="popup__title">Редактировать профиль</h2>
-      <input class="popup__input popup__input_name" id="popup-name" maxlength="40" minlength="2" name="popup-name"
-             required
-             type="text" value=""/>
-      <span class="error" id="popup-name-error"></span>
-      <input class="popup__input popup__input_job" id="popup-job" maxlength="200" minlength="2" name="popup-job"
-             required
-             type="text" value=""/>
-      <span class="error" id="popup-job-error"></span>
-      <button class="popup__save popup__button" type="submit">Сохранить</button>
-    </form>
-  </div>
-
-  <div class="popup popup_create-card">
-    <form class="popup__container popup__create-container popup__form" name="form-img">
-      <button class="popup__close popup__close-create" type="reset"></button>
-      <h2 class="popup__title">Новое место</h2>
-      <input class="popup__input popup__input_name-card" id="popup-name-img" maxlength="30" minlength="2"
-             name="popup-name-img"
-             placeholder="Название" required type="text" value=""/>
-      <span class="error" id="popup-name-img-error"></span>
-      <input class="popup__input popup__input_link" id="popup-link" name="popup-link" placeholder="Ссылка на картинку"
-             required type="url"
-             value=""/>
-      <span class="error" id="popup-link-error"></span>
-      <button class="popup__save popup__button" type="submit">Создать</button>
-    </form>
-  </div>
-
-  <div class="popup popup_picture">
-    <div class="popup__container popup__container_picture">
-      <button class="popup__close popup__close-picture" type="reset"></button>
-      <figure class="popup__wrapper">
-        <img alt="Фото" class="popup__image" src="#"/>
-        <figcaption class="popup__caption"></figcaption>
-      </figure>
+  <div class="page">
+    <div class="popup popup_user">
+      <form class="popup__container popup__form" name="form-container">
+        <button class="popup__close" type="reset"></button>
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <input class="popup__input popup__input_name" id="popup-name" maxlength="40" minlength="2" name="popup-name"
+          required type="text" value="" />
+        <span class="error" id="popup-name-error"></span>
+        <input class="popup__input popup__input_job" id="popup-job" maxlength="200" minlength="2" name="popup-job"
+          required type="text" value="" />
+        <span class="error" id="popup-job-error"></span>
+        <button class="popup__save popup__button" type="submit">Сохранить</button>
+      </form>
     </div>
-  </div>
 
-  <header class="header">
-    <img alt="Место" class="header__logo" src="./images/logo.svg"/>
-  </header>
+    <div class="popup popup_create-card">
+      <form class="popup__container popup__create-container popup__form" name="form-img">
+        <button class="popup__close popup__close-create" type="reset"></button>
+        <h2 class="popup__title">Новое место</h2>
+        <input class="popup__input popup__input_name-card" id="popup-name-img" maxlength="30" minlength="2"
+          name="popup-name-img" placeholder="Название" required type="text" value="" />
+        <span class="error" id="popup-name-img-error"></span>
+        <input class="popup__input popup__input_link" id="popup-link" name="popup-link" placeholder="Ссылка на картинку"
+          required type="url" value="" />
+        <span class="error" id="popup-link-error"></span>
+        <button class="popup__save popup__button" type="submit">Создать</button>
+      </form>
+    </div>
 
-  <main class="main">
-    <section class="profile">
-      <div class="profile__user">
-        <img alt="Александра" class="profile__avatar" src="./images/avatar.jpg"/>
-        <div class="profile__info">
-          <div class="profile__container">
-            <h1 class="profile__name">Александра</h1>
-            <p class="profile__job">Не исследователь океана</p>
-          </div>
-          <button class="profile__edit-button" type="button"></button>
-        </div>
+    <div class="popup popup_picture">
+      <div class="popup__container popup__container_picture">
+        <button class="popup__close popup__close-picture" type="reset"></button>
+        <figure class="popup__wrapper">
+          <img alt="Фото" class="popup__image" src="#" />
+          <figcaption class="popup__caption"></figcaption>
+        </figure>
       </div>
-      <button class="profile__button" type="button"></button>
-    </section>
-    <section class="elements"></section>
-  </main>
-
-  <footer class="footer">
-    <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
-  </footer>
-</div>
-<template id="elementTemplate">
-  <div class="element">
-    <button class="element__delete-btn" type="button"></button>
-    <img alt="Фото" class="element__place" src="#"/>
-    <div class="element__info">
-      <h2 class="element__title"></h2>
-      <button class="element__like" type="button"></button>
     </div>
-  </div>
-</template>
 
-<script src="./scripts/index.js" type="module"></script>
+    <header class="header">
+      <img alt="Место" class="header__logo" src="./images/logo.svg" />
+    </header>
+
+    <main class="main">
+      <section class="profile">
+        <div class="profile__user">
+          <img alt="Александра" class="profile__avatar" src="./images/avatar.jpg" />
+          <div class="profile__info">
+            <div class="profile__container">
+              <h1 class="profile__name">Александра</h1>
+              <p class="profile__job">Не исследователь океана</p>
+            </div>
+            <button class="profile__edit-button" type="button"></button>
+          </div>
+        </div>
+        <button class="profile__button" type="button"></button>
+      </section>
+      <section class="elements"></section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
+    </footer>
+  </div>
+  <template id="elementTemplate">
+    <div class="element">
+      <button class="element__delete-btn" type="button"></button>
+      <img alt="Фото" class="element__place" src="#" />
+      <div class="element__info">
+        <h2 class="element__title"></h2>
+        <button class="element__like" type="button"></button>
+      </div>
+    </div>
+  </template>
+
+  <script src="./scripts/index.js" type="module"></script>
 </body>
 
 </html>
