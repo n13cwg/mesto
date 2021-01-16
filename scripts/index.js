@@ -6,10 +6,9 @@ import FormValidator from './FormValidator.js';
 
 const cardsList = new Section({
   renderer: () => {
-    // Тело функции renderer пока оставим пустым
+    
   },
 },
-// elementsContainer
 ); 
 
 // Добавление новой карточки
