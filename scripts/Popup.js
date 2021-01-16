@@ -3,6 +3,7 @@ import {items} from './utils.js';
 export default class Popup {
   constructor(popup) {
     this._popup = popup;
+    this._handleEscClose = this._handleEscClose.bind(this)
   }
 
   open() {
@@ -13,12 +14,17 @@ export default class Popup {
     this._popup.classList.remove('popup_opened');
   }
 
-  _handleESC() {
-    // содержит логику закрытия попапа клавишей Esc
+  _handleEscClose() {
+    if (evt.key === 'Escape') {
+      this.close();
+   }
   }
 
   _handleOverlayClick() {
-
+    if (evt.target !== evt.currentTarget) {
+      return
+    }
+    this.close();
   }
 
   setEventListeners() {
