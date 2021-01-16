@@ -1,3 +1,5 @@
+import Card from './Card.js';
+import { items, initialCards } from './utils.js';
 // class Section отвечает за отрисовку элементов на странице
 export default class Section {
   constructor({ items, renderer }, containerSelector) {  
@@ -6,7 +8,9 @@ export default class Section {
     this._container = document.querySelector(containerSelector); // Контейнер карточек (лежит в index.js)
   }
 
-  renderItem(); // Данные карточки в функцию рендера карточек
+  renderItem(items) { // Данные карточки в функцию рендера карточек
+
+  }
 
   appendItem(); // DOM элемент карточки (функция рендера карточек)
 

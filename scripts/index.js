@@ -1,7 +1,16 @@
-import { validationConfig, items, initialCards } from './utils.js'
-import Card from './Card.js'
+import { validationConfig, items, initialCards } from './utils.js';
+import Card from './Card.js';
 // import Popup from './Popup.js';
-import FormValidator from './FormValidator.js'
+import Section from './Section.js';
+import FormValidator from './FormValidator.js';
+
+const cardsList = new Section({
+  renderer: () => {
+    // Тело функции renderer пока оставим пустым
+  },
+},
+// elementsContainer
+); 
 
 // Добавление новой карточки
 function saveCard(evt) {

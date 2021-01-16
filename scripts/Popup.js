@@ -1,5 +1,4 @@
 import {items} from './utils.js';
-
 // class Popup отвечает за открытие и закрытие попапа
 export default class Popup {
   constructor(popup) {
@@ -41,3 +40,4 @@ class OpenPopupUser extends Popup {
     this._close();
   }
 }
+
