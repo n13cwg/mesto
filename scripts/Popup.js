@@ -1,5 +1,6 @@
 import {items} from './utils.js';
 
+// class Popup отвечает за открытие и закрытие попапа
 export default class Popup {
   constructor(popup) {
     this._popup = popup;
@@ -13,11 +14,16 @@ export default class Popup {
     this._popup.classList.remove('popup_opened');
   }
 
-  _handleEscClose() {
+  _handleESC() {
+    // содержит логику закрытия попапа клавишей Esc
+  }
+
+  _handleOverlayClick() {
 
   }
-  setEventListeners() {
 
+  setEventListeners() {
+    // добавляет слушатель клика иконке закрытия попапа
   }
 }
 
