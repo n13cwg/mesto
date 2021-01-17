@@ -1,5 +1,6 @@
-import { items } from './utils.js'
-import { openPopup } from './index.js'
+import { items } from './utils.js';
+import { openPopup } from './index.js';
+import Popup from './Popup.js';
 
 export default class Card {
   constructor(items, cardSelector) {
