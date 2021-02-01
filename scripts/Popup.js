@@ -3,6 +3,7 @@ import {items} from './utils.js';
 export default class Popup {
   constructor(popup) {
     this._popup = popup;
+    this.btnClose = document.querySelector('.popup__close');
     this._handleEscClose = this._handleEscClose.bind(this)
   }
 
@@ -28,7 +29,7 @@ export default class Popup {
   }
 
   setEventListeners() {
-    this._popup.items.btnClose.addEventListener('click', () => this.close.bind(this));
+    this._popup.btnClose.addEventListener('click', () => this.close.bind(this));
   }
 }
 
