@@ -1,30 +1,3 @@
-import {
-  validationConfig,
-  initialCards,
-  popupUser,
-  popupCreateCard,
-  popupPicture,
-  popupCreateContainer,
-  popupContainer,
-  btnEdit,
-  btnClose,
-  btnImgAdd,
-  btnImgClose,
-  btnClosePicture,
-  elementsContainer,
-  elementTemplate,
-  picture,
-  pictureCaption,
-  inputName,
-  inputJob,
-  inputCardName,
-  inputImgLink,
-  userName,
-  userJob,
-} from "./utils.js";
-import { openPopup } from './index.js';
-import Popup from './Popup.js';
-
 export default class Card {
   constructor(items, cardSelector) {
     this._name = items.name;
@@ -35,14 +8,15 @@ export default class Card {
   _getTemplate() {
     const cardElement = document // брём содержимое template-элемента с селектором cardSelector
       .querySelector(this._cardSelector)
-      .content.querySelector('.element') // достаём из него элемент с классом .element
+      .content
+      .querySelector('.element') // достаём из него элемент с классом .element
       .cloneNode(true); // клонировать
-
-    return cardElement; // возвращаем клонированный элемент
+      return cardElement; // возвращаем клонированный элемент
   }
 
   generateCard() {
     this._element = this._getTemplate(); // запиcываем разметку в поле _element
+    this._setEventListeners();
     this._elCardPlace = this._element.querySelector('.element__place');
     this._elCardTitle = this._element.querySelector('.element__title');
     this._btnLike = this._element.querySelector('.element__like');
@@ -50,8 +24,7 @@ export default class Card {
     this._elCardPlace.src = this._link;
     this._elCardPlace.alt = this._name;
     this._elCardTitle.textContent = this._name;
-
-    this._setEventListeners();
+    
     return this._element;
   }
 
@@ -60,6 +33,7 @@ export default class Card {
   }
 
   _delCard() {
+    // this._element.remove();
     this._elCardTmplt = this._element.closest('.element');
     this._elCardTmplt.remove();
   }
@@ -73,6 +47,6 @@ export default class Card {
   _setEventListeners() {
     this._btnLike.addEventListener('click', () => this._likeCard());
     this._btnDelete.addEventListener('click', () => this._delCard());
-    this._elCardPlace.addEventListener('click', () => this._openPopupPicture());
+    this._elCardPlace.addEventListener('click', () => this._openPopupPicture(this._name, this._link));
   }
 }

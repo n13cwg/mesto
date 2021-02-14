@@ -1,21 +1,21 @@
-// import Card from './Card.js';
-// import { items, initialCards } from './utils.js';
-// // class Section отвечает за отрисовку элементов на странице
-// export default class Section {
-//   constructor({ items, renderer }, containerSelector) {  
-//     this._initialCards = items; // Массив карточек
-//     this._renderer = renderer; // Отрисовка каждого отдельного элемента. Функция рендера карточек (лежит в index.js)
-//     this._container = document.querySelector(items.containerSelector); // Контейнер карточек
-//   }
+// class Section отвечает за отрисовку элементов на странице
+export default class Section {
+  constructor({ items, renderer }, containerSelector) {  
+    this._initialCards = items; // Массив карточек
+    this._renderer = renderer; // Отрисовка каждого отдельного элемента. Функция рендера карточек (лежит в index.js)
+    this._container = document.querySelector(containerSelector); // Контейнер карточек
+  }
 
-//   renderItem(items) {
-//     items.reverse().forEach(item => {
-//       this.renderer(item);
-//     });
-//   }
-//   addItem(item); // ???
+  renderItems() { // ???
+    	this._renderedItems.forEach(item => {
+      this.renderer(item);
+    });
+  }
+  addItem() { // ???
+		this._container.append(element);
+	};
 
-//   appendItem(); // DOM элемент карточки (функция рендера карточек)
-
-//   prependItem(); // DOM элемент карточки (добавление карточки)
-// }
+  prependItem() { // DOM элемент карточки (добавление карточки)
+		this._container.prepend(element);
+	};
+}

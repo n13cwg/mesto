@@ -8,7 +8,7 @@
   export const btnClose = document.querySelector('.popup__close');
   export const btnImgAdd = document.querySelector('.profile__button');
   export const btnImgClose = document.querySelector('.popup__close-create');
-  export const  btnClosePicture = document.querySelector('.popup__close-picture');
+  export const btnClosePicture = document.querySelector('.popup__close-picture');
 
   export const elementsContainer = document.querySelector('.elements');
   export const elementTemplate = document.querySelector('#elementTemplate').content;
