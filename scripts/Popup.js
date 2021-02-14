@@ -1,4 +1,27 @@
-import {items} from './utils.js';
+import {
+  validationConfig,
+  initialCards,
+  popupUser,
+  popupCreateCard,
+  popupPicture,
+  popupCreateContainer,
+  popupContainer,
+  btnEdit,
+  btnClose,
+  btnImgAdd,
+  btnImgClose,
+  btnClosePicture,
+  elementsContainer,
+  elementTemplate,
+  picture,
+  pictureCaption,
+  inputName,
+  inputJob,
+  inputCardName,
+  inputImgLink,
+  userName,
+  userJob,
+} from "./utils.js";
 // class Popup отвечает за открытие и закрытие попапа
 export default class Popup {
   constructor(popup) {

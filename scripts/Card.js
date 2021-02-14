@@ -1,4 +1,27 @@
-import { items } from './utils.js';
+import {
+  validationConfig,
+  initialCards,
+  popupUser,
+  popupCreateCard,
+  popupPicture,
+  popupCreateContainer,
+  popupContainer,
+  btnEdit,
+  btnClose,
+  btnImgAdd,
+  btnImgClose,
+  btnClosePicture,
+  elementsContainer,
+  elementTemplate,
+  picture,
+  pictureCaption,
+  inputName,
+  inputJob,
+  inputCardName,
+  inputImgLink,
+  userName,
+  userJob,
+} from "./utils.js";
 import { openPopup } from './index.js';
 import Popup from './Popup.js';
 
@@ -42,9 +65,9 @@ export default class Card {
   }
 
   _openPopupPicture() {
-    openPopup(items.popupPicture);
-    items.picture.src = this._elCardPlace.src;
-    items.pictureCaption.textContent = this._elCardPlace.name;
+    openPopup(popupPicture);
+    picture.src = this._elCardPlace.src;
+    pictureCaption.textContent = this._elCardPlace.name;
   }
 
   _setEventListeners() {

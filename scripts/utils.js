@@ -1,29 +1,27 @@
-export const items = {
-  popupUser: document.querySelector('.popup_user'),
-  popupCreateCard: document.querySelector('.popup_create-card'),
-  popupPicture: document.querySelector('.popup_picture'),
-  popupCreateContainer: document.querySelector('.popup__create-container'),
-  popupContainer: document.querySelector('.popup__container'),
+  export const popupUser = document.querySelector('.popup_user');
+  export const popupCreateCard = document.querySelector('.popup_create-card');
+  export const popupPicture = document.querySelector('.popup_picture');
+  export const popupCreateContainer = document.querySelector('.popup__create-container');
+  export const popupContainer = document.querySelector('.popup__container');
 
-  btnEdit: document.querySelector('.profile__edit-button'),
-  btnClose: document.querySelector('.popup__close'),
-  btnImgAdd: document.querySelector('.profile__button'),
-  btnImgClose: document.querySelector('.popup__close-create'),
-  btnClosePicture: document.querySelector('.popup__close-picture'),
+  export const btnEdit = document.querySelector('.profile__edit-button');
+  export const btnClose = document.querySelector('.popup__close');
+  export const btnImgAdd = document.querySelector('.profile__button');
+  export const btnImgClose = document.querySelector('.popup__close-create');
+  export const  btnClosePicture = document.querySelector('.popup__close-picture');
 
-  elementsContainer: document.querySelector('.elements'),
-  elementTemplate: document.querySelector('#elementTemplate').content,
-  picture: document.querySelector('.popup__image'),
-  pictureCaption: document.querySelector('.popup__caption'),
+  export const elementsContainer = document.querySelector('.elements');
+  export const elementTemplate = document.querySelector('#elementTemplate').content;
+  export const picture = document.querySelector('.popup__image');
+  export const pictureCaption = document.querySelector('.popup__caption');
 
-  inputName: document.querySelector('.popup__input_name'),
-  inputJob: document.querySelector('.popup__input_job'),
-  inputCardName: document.querySelector('.popup__input_name-card'),
-  inputImgLink: document.querySelector('.popup__input_link'),
+  export const inputName = document.querySelector('.popup__input_name');
+  export const inputJob = document.querySelector('.popup__input_job');
+  export const inputCardName = document.querySelector('.popup__input_name-card');
+  export const inputImgLink = document.querySelector('.popup__input_link');
 
-  userName: document.querySelector('.profile__name'),
-  userJob: document.querySelector('.profile__job'),
-}
+  export const userName = document.querySelector('.profile__name');
+  export const userJob = document.querySelector('.profile__job');
 
 export const initialCards = [
   {
