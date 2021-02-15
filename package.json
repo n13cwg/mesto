@@ -1,0 +1,23 @@
+{
+  "name": "mesto",
+  "version": "0.0.1",
+  "description": "* [Ссылка на проект](https://n13cwg.github.io/mesto/)",
+  "main": "babel.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n13cwg/mesto.git"
+  },
+  "author": "Alex Mad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n13cwg/mesto/issues"
+  },
+  "homepage": "https://github.com/n13cwg/mesto#readme",
+  "devDependencies": {
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0"
+  }
+}
